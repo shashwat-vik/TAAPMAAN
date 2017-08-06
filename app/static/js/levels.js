@@ -88,17 +88,3 @@ shToggle.addEventListener("click", function() {
     }, 500);
   }
 });
-
-// FS link disappearing
-
-var fslink = document.getElementById("fs-link");
-
-function fsLinkVis() {
-  if (window.location.href == "https://s.codepen.io/timaikens/fullpage/raEqpp?") {
-    fslink.className = "fshide";
-  } else {
-    fslink.className = "";
-  }
-}
-
-window.onload = fsLinkVis;
