@@ -2,6 +2,10 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.route("/levels")
+def levels():
+    return render_template("levels.html")
+
 @app.route("/rounds")
 def topics():
     return render_template("rounds.html")

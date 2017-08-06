@@ -1,0 +1,275 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+#container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.panel,
+.text,
+.bottom,
+#shToggle,
+#write-up > p {
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.bottom > a,
+#thalogo path {
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.panel,
+.text > h1,
+.text > h3,
+.panel > div {
+  cursor: default;
+}
+/* --- LOGO --- */
+
+#thalogo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 15px;
+  left: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#thalogo path {
+  fill: #FFFFFF;
+}
+
+#thalogo:hover path {
+  fill: #D8334A;
+}
+
+#fs-link {
+  position: absolute;
+  top: 50px;
+  left: 140px;
+  z-index: 10;
+  color: #D8334A;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#fs-link:hover {
+  color: #F8536A;
+}
+
+#fs-link.fshide {
+  display: none;
+}
+/* --- PANELS --- */
+
+.panel {
+  position: absolute;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  text-align: center;
+}
+
+#one {
+  /*background: #111111 center/cover no-repeat;*/
+  left: 0;
+}
+
+#two {
+  /*background: #333333 url('https://download.unsplash.com/photo-1418479631014-8cbf89db3431') center/cover no-repeat;*/
+  left: 25%;
+}
+
+#three {
+  /*background: #555555 url('https://download.unsplash.com/reserve/unsplash_5288cc8f3571d_1.JPG') center/cover no-repeat;*/
+  left: 50%;
+}
+
+#four {
+  /*background: #AAAAAA url('https://download.unsplash.com/42/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg') center/cover no-repeat;*/
+  left: 75%;
+}
+/* --- TEXT --- */
+
+.text {
+  display: inline-block;
+  position: relative;
+  top: 37%;
+  text-align: left;
+}
+
+.text > h1 {
+  margin: -10px 0 0 0;
+  padding: 0;
+  font-family: 'Droid Serif', serif;
+  font-weight: normal;
+  font-size: 9em;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 12px #555555;
+}
+
+.text > h3 {
+  margin: 0;
+  color: #FFFFFF;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.7em;
+  opacity: 0.8;
+}
+
+.inactive .text {
+  opacity: 0.3;
+}
+/* --- BOTTOM BUTTON --- */
+
+.bottom {
+  position: absolute;
+  font-size: 1.5em;
+  left: 0;
+  bottom: 0;
+  width: 62.5%;
+  height: 12%;
+  text-align: center;
+  border-bottom: 10px solid transparent;
+}
+
+.active .bottom {
+  width: 100%;
+  border-bottom: 10px solid #D8334A;
+}
+
+.inactive .bottom {
+  width: 50%;
+  opacity: 0;
+}
+
+.bottom > a {
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+  height: 80px;
+  padding: 9px 20px 10px;
+  border: 3px solid #D8334A;
+  border-radius: 400px;
+}
+
+.bottom > a:hover {
+  background-color: #D8334A;
+}
+/* --- WRITE-UP --- */
+
+#shToggle {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  height: 40px;
+  width: 40px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#shToggle.ex {
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+#shToggle:before,
+#shToggle:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  width: 4px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: #D8334A;
+}
+
+#shToggle:after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+#write-up {
+  position: absolute;
+  text-align: right;
+  top: 30px;
+  right: 100px;
+  width: 0;
+  color: #FFFFFF;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  overflow: hidden;
+}
+
+#write-up > p {
+  position: relative;
+  right: 0;
+  margin: 0 0 1em;
+  text-shadow: 1px 1px 4px #333333;
+}
+
+#write-up.hide > p {
+  right: -28em;
+  opacity: 0;
+}
+
+#write-up a {
+  text-decoration: none;
+  color: #D8334A;
+  font-weight: bold;
+}
+
+#write-up a:hover {
+  color: #F8536A;
+}
+
+@media (max-width:1200px) {
+  .text > h1 {font-size: 7em;}
+}
+
+@media (max-width:950px) {
+  .text > h1 {font-size: 5em;}
+}
