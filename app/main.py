@@ -2,9 +2,9 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/")
-def home():
-    return render_template('exp.html')
+@app.route("/score")
+def score():
+    return render_template('score.html')
 
 @app.route("/levels")
 def levels():
