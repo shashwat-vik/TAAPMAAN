@@ -1,11 +1,13 @@
 <html>
 <head>
+    <link href="{{url_for('static', filename='css/animsition.min.css')}}" rel="stylesheet"/>
     <link rel="stylesheet" href="{{url_for('static', filename='css/system/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/system/normalize.5.0.0.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/score.css')}}">
 </head>
 
 <body>
+<div class="animsition" style="width:100%;">
     <main style="text-align: center;">
         <h1 style="font-weight: 300">SCORE - CARD</h1>
         <p><i class="fa fa-diamond fa-2x" style="color:white"></i></p>
@@ -60,5 +62,29 @@
             </div>
         </li>
     </ul>
+</div>
 </body>
+<script type="text/javascript" src="{{url_for('static',filename='js/system/jquery-1.7.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/animsition.min.js')}}"></script>
+<script>
+    $(document).ready(function() {
+      $(".animsition").animsition({
+        inClass: 'zoom-in-lg',
+        inDuration: 2000,
+        linkElement: '.animsition-link',
+
+        loading: true,
+        loadingParentElement: 'body', //animsition wrapper element
+        loadingClass: 'animsition-loading',
+        onLoadEvent: true,
+        browser: [ 'animation-duration', '-webkit-animation-duration'],
+        // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+        // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+        overlay : false,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body',
+        transition: function(url){ window.location.href = url; }
+      });
+    });
+</script>
 </html>
