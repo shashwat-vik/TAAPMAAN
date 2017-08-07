@@ -15,7 +15,7 @@ MYTIMER = new Timer({
 });
 
 
-// PAUSE TIMER IF AND CHANGE SYMBOL IF LOCK CARD HAS LOCK SYMBOL
+// PAUSE TIMER, TOGGLE LOCK SYMBOL & OPTION HIGHLIGHT CHANGE, IF LOCK CARD HAS LOCK SYMBOL
 cardlock_handler = function() {
     // ACTION APPROPRIATE TO UNLOCKED STATE
     if ($(".card-lock").find(".fa-unlock").length) {
@@ -42,7 +42,7 @@ cardlock_handler = function() {
 };
 
 $(document).ready(function(e) {
-    // TIMER HANDLER. ACTIVATE TIMER ON CLICK.
+    // TIMER HANDLER. ACTIVATE TIMER ON CLICK, IF NOT ALREADY TICKING.
     $(".card-header .card-timer").click(function() {
         console.log("HEADER CLICKED");
         if (!TIMER_STARTED) {
@@ -67,7 +67,8 @@ $(document).ready(function(e) {
     // ENVOLOPE CLICK HANDLER
     $(".card-header .card-utils .fa-envelope-o").click(function() {
         var answer = $(".insights .answer_option").attr("secanswer");
-        if (!$("#option_"+answer+".option button").hasClass('right_answer')) {
+        // // ONLY IF LIFELINE IS RIGHT ANSWER NOT ALREADY TICKED AND CARD-LOCK IS CLOSED
+        if (!$("#option_"+answer+".option button").hasClass('right_answer') && $(".card-lock").find(".fa-lock").length) {
             $("#option_"+answer+".option button").addClass('right_answer');
         }
     });

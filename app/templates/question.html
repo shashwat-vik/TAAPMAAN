@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link href="{{url_for('static', filename='css/animsition.min.css')}}" rel="stylesheet"/>
+    <link href="{{url_for('static', filename='css/system/animsition.min.css')}}" rel="stylesheet"/>
     <link rel="stylesheet" href="{{url_for('static', filename='css/system/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/system/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/question.css')}}">
@@ -24,7 +24,9 @@
                                     0 0 : 3 0
                             </div>
                             <div class="col-md-3 card-utils">
-                                <i class="fa fa-arrow-right fa-2x pull-right" style="padding:0.6em 0.6em 0 0;"></i>
+                                <a class="animsition-link" href="{{url_for('topics')}}">
+                                    <i class="fa fa-arrow-right fa-2x pull-right" style="padding:0.6em 0.6em 0 0;"></i>
+                                </a>
                                 <i class="fa fa-envelope-o fa-2x pull-right" style="padding:0.6em 0.6em 0 0;"></i>
                             </div>
                         </div>
@@ -63,14 +65,14 @@
 </div>
 
 <script type="text/javascript" src="{{url_for('static',filename='js/system/jquery-1.7.min.js')}}"></script>
-<script src="{{url_for('static', filename='js/animsition.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/system/animsition.min.js')}}"></script>
 <script>
     $(document).ready(function() {
       $(".animsition").animsition({
         inClass: 'zoom-in',
         outClass: 'zoom-out',
         inDuration: 2000,
-        outDuration: 800,
+        outDuration: 1500,
         linkElement: '.animsition-link',
         // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
         loading: true,
@@ -90,7 +92,7 @@
       });
     });
 </script>
-<script src="{{url_for('static', filename='js/timer.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/system/timer.min.js')}}"></script>
 <script src="{{url_for('static', filename='js/question.js')}}"></script>
 </html>
 </html>

@@ -14,7 +14,7 @@ def score():
 def levels():
     return render_template("levels.html")
 
-@app.route("/rounds")
+@app.route("/topics")
 def topics():
     return render_template("rounds.html")
 

@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link href="{{url_for('static', filename='css/animsition.min.css')}}" rel="stylesheet"/>
+    <link href="{{url_for('static', filename='css/system/animsition.min.css')}}" rel="stylesheet"/>
     <link href="{{url_for('static', filename='css/system/normalize.css')}}" rel="stylesheet"/>
     <link href="{{url_for('static', filename='css/rounds.css')}}" rel="stylesheet">
 </head>
@@ -143,7 +143,7 @@
             <div class="col-sm-4 col-md-4 col-sm-offset-4 col-md-offset-4">
                 <div class="ih-item square colored effect9 top_to_bottom">
                     <a class="animsition-link" href="{{url_for('levels')}}">
-                        <div class="img"><img src="{{url_for('static',filename='images/')}}" alt="img"></div>
+                        <div class="img"><img src="" alt="img"></div>
                         <div class="info">
                             <div class="info-back">
                                 <h3>EQUIPMENTS</h3>
@@ -159,13 +159,13 @@
 </body>
 
 <script type="text/javascript" src="{{url_for('static',filename='js/system/jquery-1.7.min.js')}}"></script>
-<script src="{{url_for('static', filename='js/animsition.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/system/animsition.min.js')}}"></script>
 <script>
     $(document).ready(function() {
       $(".animsition").animsition({
         inClass: 'fade-in',
         outClass: 'zoom-out',
-        inDuration: 800,
+        inDuration: 4500,
         outDuration: 2000,
         linkElement: '.animsition-link',
         // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
