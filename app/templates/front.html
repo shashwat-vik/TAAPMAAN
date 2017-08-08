@@ -1,0 +1,53 @@
+<html>
+<head>
+    <link href="{{url_for('static', filename='css/system/animsition.min.css')}}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/system/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/system/font-awesome.min.css')}}">
+    <link href="{{url_for('static', filename='css/front.css')}}" rel="stylesheet">
+</head>
+<body>
+<div class="animsition">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-sm-offset-4 col-md-offset-4 text-center">
+                <img src="{{url_for('static', filename='images/Original/ISHRAE.png')}}" class="jugad" alt="Lorem Ipsum">
+            </div>
+        </div>
+        <div class="row text-center" style="padding-top:2em;">
+            <div class="typewrite" data-period="2000" data-type='[ "TAAPMAAN - 2017", "ISHRAE IEM STUDENTS&#8217; CHAPTER.", "A society less ordinary."]'>
+                <span class="wrap"></span>
+            </div>
+        </div>
+        <div class="row text-center" style="padding-top:2em;">
+            <a href="{{url_for('score')}}" class="animsition-link"><i class="fa fa-circle fa-2x" style="color:white"></i></a>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="{{url_for('static',filename='js/system/jquery-1.7.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/system/animsition.min.js')}}"></script>
+<script>
+    $(document).ready(function() {
+      $(".animsition").animsition({
+        inClass: 'fade-in',
+        outClass: 'zoom-out',
+        inDuration: 4000,
+        outDuration: 2000,
+        linkElement: '.animsition-link',
+
+        loading: true,
+        loadingParentElement: 'body', //animsition wrapper element
+        loadingClass: 'animsition-loading',
+        onLoadEvent: true,
+        browser: [ 'animation-duration', '-webkit-animation-duration'],
+        // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+        // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+        overlay : false,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body',
+        transition: function(url){ window.location.href = url; }
+      });
+    });
+</script>
+<script type="text/javascript" src="{{url_for('static',filename='js/front.js')}}"></script>
+</html>

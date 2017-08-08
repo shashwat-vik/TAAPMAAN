@@ -14,52 +14,64 @@
     </main>
     <ul>
         <li class="card">
+            <a class="animsition-link" href="{{url_for('topics')}}" style="color:#ffffff;">
             <div class="card__flipper">
                 <div class="card__front">
                     <p class="card__name"><span>Team</span><br><br>A</p>
                     <p class="card__num">100</p>
                 </div>
             </div>
+            </a>
         </li>
         <li class="card">
+            <a class="animsition-link" href="{{url_for('topics')}}" style="color:#ffffff;">
             <div class="card__flipper">
                 <div class="card__front">
                     <p class="card__name"><span>Team</span><br><br>B</p>
                     <p class="card__num">110</p>
                 </div>
             </div>
+            </a>
         </li>
         <li class="card">
+            <a class="animsition-link" href="{{url_for('topics')}}" style="color:#ffffff;">
             <div class="card__flipper">
                 <div class="card__front">
                     <p class="card__name"><span>Team</span><br><br>C</p>
                     <p class="card__num">120</p>
                 </div>
             </div>
+            </a>
         </li>
         <li class="card">
+            <a class="animsition-link" href="{{url_for('topics')}}" style="color:#ffffff;">
             <div class="card__flipper">
                 <div class="card__front">
                     <p class="card__name"><span>Team</span><br><br>D</p>
                     <p class="card__num">130</p>
                 </div>
             </div>
+            </a>
         </li>
         <li class="card">
+            <a class="animsition-link" href="{{url_for('topics')}}" style="color:#ffffff;">
             <div class="card__flipper">
                 <div class="card__front">
                     <p class="card__name"><span>Team</span><br><br>E</p>
                     <p class="card__num">140</p>
                 </div>
             </div>
+            </a>
         </li>
         <li class="card">
+            <a class="animsition-link" href="{{url_for('topics')}}" style="color:#ffffff;">
             <div class="card__flipper">
                 <div class="card__front">
                     <p class="card__name"><span>Team</span><br><br>F</p>
                     <p class="card__num">150</p>
                 </div>
             </div>
+            </a>
         </li>
     </ul>
 </div>
@@ -70,7 +82,9 @@
     $(document).ready(function() {
       $(".animsition").animsition({
         inClass: 'zoom-in-lg',
+        outClass: 'fade-out',
         inDuration: 2000,
+        outDuration: 2000,
         linkElement: '.animsition-link',
 
         loading: true,

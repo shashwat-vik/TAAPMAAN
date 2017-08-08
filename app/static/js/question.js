@@ -2,7 +2,6 @@ var MYTIMER, TIMER_STARTED=null;
 
 var ontick_handler = function(ms) {
     x = String(Math.ceil(ms/1000));
-    console.log(x);
     if(x.length > 1) x=x[0]+" "+x[1];
     else x="0 "+x[0];
     $('.card-timer').html("0 0 : "+x);
@@ -11,7 +10,7 @@ var ontick_handler = function(ms) {
 MYTIMER = new Timer({
     tick: 1,
     ontick  : function(ms) { ontick_handler(ms); },
-    onend   : function() { $('.card-timer').html("0 0 : 0 0"); }
+    onend   : function() { $('.card-timer').html("0 0 : 0 0"); cardlock_handler(); }
 });
 
 
@@ -44,7 +43,6 @@ cardlock_handler = function() {
 $(document).ready(function(e) {
     // TIMER HANDLER. ACTIVATE TIMER ON CLICK, IF NOT ALREADY TICKING.
     $(".card-header .card-timer").click(function() {
-        console.log("HEADER CLICKED");
         if (!TIMER_STARTED) {
             MYTIMER.start(30);
             TIMER_STARTED=true;
