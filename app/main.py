@@ -8,7 +8,7 @@ def front():
 
 @app.route("/question")
 def question():
-    return render_template("question.html")
+    return render_template("question2.html")
 
 @app.route("/score")
 def score():

@@ -23,8 +23,8 @@
                                     0 0 : 3 0
                             </div>
                             <div class="col-md-3 card-utils">
-                                <a class="animsition-link" href="{{url_for('topics')}}">
-                                    <i class="fa fa-arrow-right fa-2x pull-right" style="padding:0.6em 0.6em 0 0;"></i>
+                                <a class="animsition-link pull-right" href="{{url_for('topics')}}">
+                                    <i class="fa fa-arrow-right fa-2x" style="padding:0.6em 0.6em 0 0;"></i>
                                 </a>
                                 <i class="fa fa-envelope-o fa-2x pull-right" style="padding:0.6em 0.6em 0 0;"></i>
                             </div>
@@ -33,19 +33,13 @@
                     <div class="card-question">
                         <p>Who is the Prime Minister of India ?</p>
                     </div>
-                    <div class="card-options">
-                        <div class="option" id="option_1">
-                            <button type="button" class="btn btn-lg btn-block">OPTION 1</button>
-                        </div>
-                        <div class="option" id="option_2">
-                            <button type="button" class="btn btn-lg btn-block">OPTION 2</button>
-                        </div>
-                        <div class="option" id="option_3">
-                            <button type="button" class="btn btn-lg btn-block">OPTION 3</button>
-                        </div>
-                        <div class="option" id="option_4">
-                            <button type="button" class="btn btn-lg btn-block">OPTION 4</button>
-                        </div>
+                    <div class="card-multimedia text-center">
+                        <video class="content" controls>
+                            <source src="{{url_for('static', filename='')}}" width="400" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="card-input text-center">
+                        <input class="content input-lg" type="text">
                     </div>
                     <div class="card-lock text-center">
                         <i class="fa fa-unlock fa-3x" aria-hidden="true"></i>
@@ -58,7 +52,7 @@
 </body>
 
 <div class="insights" hidden>
-    <div class="answer_option" secanswer="1" style="color:white;">ABCD</div>
+    <div class="answer_option" secanswer="HELLO" style="color:white;">ABCD</div>
     <div class="insight_score" score="74" style="color:white;">ABCD</div>
     <div class="lifeline_status" pattern="1011" style="color:white;">ABCD</div>
 </div>

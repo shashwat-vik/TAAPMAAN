@@ -4,7 +4,7 @@
 
 body {
     background: #212121;
-    padding-top: 8em;
+    padding-top: 5em;
 }
 
 @font-face {
@@ -30,12 +30,25 @@ body {
     min-height: 4.5em;
 }
 
+.card-lifelines {
+    color: white;
+}
+
+.card-lifeline-disable {
+    opacity: 0.3;
+}
+
 .card-timer{
     padding-top: 0.1em;
     font-size: 2.8em;
     font-family: 'Lato';
     color: white;
     font-weight: bold;
+}
+
+.card-utils a{
+    text-decoration: none;
+    color: #333;
 }
 
 .card-question {
@@ -49,9 +62,19 @@ body {
     font-family: 'Lato';
 }
 
-.card-utils a{
-    text-decoration: none;
-    color: #333;
+.card-multimedia .content {
+    height: 400;
+    background: grey;
+}
+
+.card-input .content {
+    margin: 1em;
+    width: 30em;
+}
+
+.card-lock {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
 }
 
 .border_effect {
@@ -59,13 +82,6 @@ body {
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: 15px 4px, 15px 4px, 4px 15px, 4px 15px;
   animation: border-dance 4s infinite linear;
-}
-
-.card-lifelines {
-    color: white;
-}
-.card-lifeline-disable {
-    opacity: 0.3;
 }
 
 @keyframes border-dance {
@@ -91,10 +107,6 @@ body {
     background-color: #F8C471;
     color: #ffffff;
     font-weight: bold;
-}
-.card-lock {
-    padding-top: 1em;
-    padding-bottom: 0.5em;
 }
 
 .btn:focus, .btn:focus .btn:hover {

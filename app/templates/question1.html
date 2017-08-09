@@ -1,0 +1,97 @@
+<html>
+<head>
+    <link href="{{url_for('static', filename='css/system/animsition.min.css')}}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/system/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/system/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/question.css')}}">
+</head>
+<body>
+<div class=animsition>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <div class="row">
+                            <div class="col-md-3 card-lifelines">
+                                <i class="fa fa-mortar-board fa-2x" style="padding:0.6em 0.6em 0em 0em;"></i>
+                                <i class="fa fa-smile-o fa-2x" style="padding:0.6em 0.6em 0 0;"></i>
+                                <i class="fa fa-subscript fa-2x" style="padding:0.6em 0.6em 0 0;"></i>
+                                <i class="fa fa-history fa-2x" style="padding:0.6em 0.6em 0 0;"></i>
+                            </div>
+                            <div class="col-md-6 card-timer">
+                                    0 0 : 3 0
+                            </div>
+                            <div class="col-md-3 card-utils">
+                                <a class="animsition-link pull-right" href="{{url_for('topics')}}">
+                                    <i class="fa fa-arrow-right fa-2x" style="padding:0.6em 0.6em 0 0;"></i>
+                                </a>
+                                <i class="fa fa-envelope-o fa-2x pull-right" style="padding:0.6em 0.6em 0 0;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-question">
+                        <p>Who is the Prime Minister of India ?</p>
+                    </div>
+                    <div class="card-options">
+                        <div class="option" id="option_1">
+                            <button type="button" class="btn btn-lg btn-block">OPTION 1</button>
+                        </div>
+                        <div class="option" id="option_2">
+                            <button type="button" class="btn btn-lg btn-block">OPTION 2</button>
+                        </div>
+                        <div class="option" id="option_3">
+                            <button type="button" class="btn btn-lg btn-block">OPTION 3</button>
+                        </div>
+                        <div class="option" id="option_4">
+                            <button type="button" class="btn btn-lg btn-block">OPTION 4</button>
+                        </div>
+                    </div>
+                    <div class="card-lock text-center">
+                        <i class="fa fa-unlock fa-3x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<div class="insights" hidden>
+    <div class="answer_option" secanswer="1" style="color:white;">ABCD</div>
+    <div class="insight_score" score="74" style="color:white;">ABCD</div>
+    <div class="lifeline_status" pattern="1011" style="color:white;">ABCD</div>
+</div>
+
+<script type="text/javascript" src="{{url_for('static',filename='js/system/jquery-1.7.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/system/animsition.min.js')}}"></script>
+<script>
+    $(document).ready(function() {
+      $(".animsition").animsition({
+        inClass: 'zoom-in-lg',
+        outClass: 'zoom-out',
+        inDuration: 2000,
+        outDuration: 1000,
+        linkElement: '.animsition-link',
+        // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+        loading: true,
+        loadingParentElement: 'body', //animsition wrapper element
+        loadingClass: 'animsition-loading',
+        loadingInner: '', // e.g '<img src="loading.svg" />'
+        timeout: false,
+        timeoutCountdown: 5000,
+        onLoadEvent: true,
+        browser: [ 'animation-duration', '-webkit-animation-duration'],
+        // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+        // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+        overlay : false,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body',
+        transition: function(url){ window.location.href = url; }
+      });
+    });
+</script>
+<script src="{{url_for('static', filename='js/system/timer.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/question.js')}}"></script>
+</html>
+</html>

@@ -13,7 +13,6 @@ MYTIMER = new Timer({
     onend   : function() { $('.card-timer').html("0 0 : 0 0"); cardlock_handler(); }
 });
 
-
 // PAUSE TIMER, TOGGLE LOCK SYMBOL & OPTION HIGHLIGHT CHANGE, IF LOCK CARD HAS LOCK SYMBOL
 cardlock_handler = function() {
     // ACTION APPROPRIATE TO UNLOCKED STATE
@@ -31,11 +30,24 @@ cardlock_handler = function() {
             }
         }
         var answer = $(".insights .answer_option").attr("secanswer");
-        $("#option_"+selection+".option button").removeClass('border_effect neutral_answer');
-        if (answer == selection) {
-            $("#option_"+selection+".option button").addClass('right_answer');
+        answer = (answer.trim()).toLowerCase();
+
+        if (selection != null) {
+            // FOR TYPE 1
+            $("#option_"+selection+".option button").removeClass('border_effect neutral_answer');
         } else {
-            $("#option_"+selection+".option button").addClass('wrong_answer');
+            // FOR TYPE 2
+            $(".card-input .content").removeClass('border_effect neutral_answer');
+            selection = $(".card-input .content").val();
+            selection = (selection.trim()).toLowerCase();
+        }
+
+        if (answer == selection) {
+            $("#option_"+selection+".option button").addClass('right_answer');  // FOR TYPE 1
+            $(".card-input .content").addClass('right_answer');                 // FOR TYPE 2
+        } else {
+            $("#option_"+selection+".option button").addClass('wrong_answer');  // FOR TYPE 1
+            $(".card-input .content").addClass('wrong_answer');                 // FOR TYPE 2
         }
     };
 };
@@ -62,12 +74,35 @@ $(document).ready(function(e) {
         }
     });
 
+    // TEXT-BOX TYPING HANDLER
+    $(".card-input .content").on('click', function() {
+
+        // DISABLE INPUT IF CARD IS LOCKED, ELSE ENABLE IT
+        if ($(".card-lock").find(".fa-lock").length) {
+            $(this).attr("readonly","readonly");
+        } else {
+            if ($(this).attr("readonly") == "readonly")
+                $(this).removeAttr("readonly");
+        }
+
+        // IF CARD IS UNLOCKED APPLY NEUTRAL ANSWER ON CLICK
+        if ($(".card-lock").find(".fa-unlock").length) {
+            $(".card-input .content").removeClass('wrong_answer');      // FOR DOUBLE TAKE CASE
+            $(this).addClass('border_effect neutral_answer');
+        }
+    });
+
     // ENVOLOPE CLICK HANDLER
     $(".card-header .card-utils .fa-envelope-o").click(function() {
         var answer = $(".insights .answer_option").attr("secanswer");
-        // // ONLY IF LIFELINE IS RIGHT ANSWER NOT ALREADY TICKED AND CARD-LOCK IS CLOSED
+        // ONLY IF ITS NOT ALREADY RIGHT AND CARD-LOCK IS CLOSED
         if (!$("#option_"+answer+".option button").hasClass('right_answer') && $(".card-lock").find(".fa-lock").length) {
+            // FOR TYPE 1
             $("#option_"+answer+".option button").addClass('right_answer');
+            // FOR TYPE 2
+            $(".card-input .content").removeClass('wrong_answer');
+            $(".card-input .content").addClass('right_answer');
+            $(".card-input .content").val(answer);
         }
     });
 
