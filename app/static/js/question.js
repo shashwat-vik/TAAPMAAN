@@ -1,4 +1,5 @@
 var MYTIMER, TIMER_STARTED=null;
+var CURR_SCORE=null, NEW_SCORE=null, LPAT=null;
 
 var ontick_handler = function(ms) {
     x = String(Math.ceil(ms/1000));
@@ -29,7 +30,7 @@ cardlock_handler = function() {
                     selection=String(i);
             }
         }
-        var answer = $(".insights .answer_option").attr("secanswer");
+        var answer = $(".insights .ANS_OPT").attr("secanswer");
         answer = (answer.trim()).toLowerCase();
 
         if (selection != null) {
@@ -76,7 +77,6 @@ $(document).ready(function(e) {
 
     // TEXT-BOX TYPING HANDLER
     $(".card-input .content").on('click', function() {
-
         // DISABLE INPUT IF CARD IS LOCKED, ELSE ENABLE IT
         if ($(".card-lock").find(".fa-lock").length) {
             $(this).attr("readonly","readonly");
@@ -94,7 +94,7 @@ $(document).ready(function(e) {
 
     // ENVOLOPE CLICK HANDLER
     $(".card-header .card-utils .fa-envelope-o").click(function() {
-        var answer = $(".insights .answer_option").attr("secanswer");
+        var answer = $(".insights .ANS_OPT").attr("secanswer");
         // ONLY IF ITS NOT ALREADY RIGHT AND CARD-LOCK IS CLOSED
         if (!$("#option_"+answer+".option button").hasClass('right_answer') && $(".card-lock").find(".fa-lock").length) {
             // FOR TYPE 1
@@ -106,16 +106,39 @@ $(document).ready(function(e) {
         }
     });
 
+    // NEXT PAGE CLICK HANDLER BY POSTING DATA
+    // (HIGHLY DANGEROUS AS ITS ASSUMES REQUEST DATA IS COMPLETED IN THOSE 2 SEC BEFORE 'animsition' DURATION ENDS)
+    $(".card-header .card-utils .fa-arrow-right").on('click', function() {
+        url = $(".insights .NEXTP").attr("url");
+        data = {
+            'NEW_SCORE':NEW_SCORE,
+            'LPAT':LPAT
+        }
+        // AFTER UPDATING POST REQUEST OF SCORE DATA, DO A GET REQUEST TO BRING IN NEW PAGE.
+        $.ajax({
+                type : "POST",
+                url : url,
+                data : data,
+                success : function(data, status, xhr) {
+                    console.log('POST UPDATE:'+data);
+                    //window.location.href = url;
+                },
+                error: function(xhr, status, err) {
+                    alert("XHR: "+xhr+" STATTUS: "+status+" ERR: "+err);
+                }
+            });
+    });
+
     // BEGINNING LIFELINE STATUS UPDATE
-    var pattern = $(".insights .lifeline_status").attr("pattern");
-    var score = parseInt($(".insights .insight_score").attr("score"));
-    if (pattern[0] == "0")
+    LPAT = $(".insights .LPAT").attr("pattern");
+    CURR_SCORE = parseInt($(".insights .CURR_SCORE").attr("score"));
+    if (LPAT[0] == "0")
         $(".card-header .card-lifelines .fa-mortar-board").addClass('card-lifeline-disable');
-    if (pattern[1] == "0")
+    if (LPAT[1] == "0")
         $(".card-header .card-lifelines .fa-smile-o").addClass('card-lifeline-disable');
-    if (pattern[2] == "0")
+    if (LPAT[2] == "0")
         $(".card-header .card-lifelines .fa-subscript").addClass('card-lifeline-disable');
-    if (pattern[3] == "0" || score < 75)
+    if (LPAT[3] == "0" || CURR_SCORE < 75)
         $(".card-header .card-lifelines .fa-history").addClass('card-lifeline-disable');
 
     // ASSIGN LIFELINE HANDLERS

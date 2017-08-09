@@ -12,7 +12,7 @@
                 <h1>1</h1>
             </div>
             <div class="bottom_0"><a href="#">DOUBLE - HALF</a></div>
-            <div class="bottom"><a href="{{url_for('question')}}">&nbsp&nbspSTART&nbsp&nbsp</a></div>
+            <div class="bottom"><a href="{{url_for('question', TEAM=data['TEAM'], TOPIC=data['TOPIC'], LEVEL=1)}}">&nbsp&nbspSTART&nbsp&nbsp</a></div>
         </div>
         <div class="panel" id="two" style="background: url({{url_for('static', filename='images/2.jpg')}})">
             <div class="text">
@@ -20,7 +20,7 @@
                 <h1>2</h1>
             </div>
             <div class="bottom_0"><a href="#">DOUBLE - HALF</a></div>
-            <div class="bottom"><a href="{{url_for('question')}}">&nbsp&nbspSTART&nbsp&nbsp</a></div>
+            <div class="bottom"><a href="{{url_for('question', TEAM=data['TEAM'], TOPIC=data['TOPIC'], LEVEL=2)}}">&nbsp&nbspSTART&nbsp&nbsp</a></div>
         </div>
         <div class="panel" id="three" style="background: url({{url_for('static', filename='images/3.jpg')}})">
             <div class="text">
@@ -28,7 +28,7 @@
                 <h1>3</h1>
             </div>
             <div class="bottom_0"><a href="#">DOUBLE - HALF</a></div>
-            <div class="bottom"><a href="{{url_for('question')}}">&nbsp&nbspSTART&nbsp&nbsp</a></div>
+            <div class="bottom"><a href="{{url_for('question', TEAM=data['TEAM'], TOPIC=data['TOPIC'], LEVEL=3)}}">&nbsp&nbspSTART&nbsp&nbsp</a></div>
         </div>
         <div class="panel" id="four" style="background: url({{url_for('static', filename='images/4.jpg')}})">
             <div class="text">
@@ -36,7 +36,7 @@
                 <h1>4</h1>
             </div>
             <div class="bottom_0"><a href="#">DOUBLE - HALF</a></div>
-            <div class="bottom"><a href="{{url_for('question')}}">&nbsp&nbspSTART&nbsp&nbsp</a></div>
+            <div class="bottom"><a href="{{url_for('question', TEAM=data['TEAM'], TOPIC=data['TOPIC'], LEVEL=4)}}">&nbsp&nbspSTART&nbsp&nbsp</a></div>
         </div>
     </div>
 </body>

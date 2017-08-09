@@ -15,7 +15,7 @@
                         <i class="fa fa-diamond fa-2x" style="color:white"></i>
                     </span>
                     <span class="curr_score">
-                        100
+                        {{data['CURR_SCORE']}}
                     </span>
                     <span class="pull-right" style="padding-top:1em;">
                         <i class="fa fa-diamond fa-2x" style="color:white"></i>
@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-sm-4 col-md-4">
                 <div class="ih-item square effect9 right_to_left">
-                    <a class="animsition-link" href="{{url_for('levels')}}">
+                    <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='TH1')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/atom.jpg')}}" alt="img"></div>
                         <div class="info">
                             <div class="info-back">
@@ -40,7 +40,7 @@
             </div>
             <div class="col-sm-4 col-md-4">
                 <div class="ih-item square effect9 bottom_to_top">
-                    <a class="animsition-link" href="{{url_for('levels')}}">
+                    <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='TH2')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/atom.jpg')}}" alt="img"></div>
                         <div class="info">
                             <div class="info-back">
@@ -54,7 +54,7 @@
             </div>
             <div class="col-sm-4 col-md-4">
                 <div class="ih-item square effect9 left_to_right">
-                    <a class="animsition-link" href="{{url_for('levels')}}">
+                    <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='TH3')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/atom.jpg')}}" alt="img"></div>
                         <div class="info">
                             <div class="info-back">
@@ -70,7 +70,7 @@
         <div class="row">
             <div class="col-sm-4 col-md-4">
                 <div class="ih-item square effect9 right_to_left">
-                    <a class="animsition-link" href="{{url_for('levels')}}">
+                    <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='BE')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/electrical.jpg')}}" alt="img"></div>
                         <div class="info">
                             <div class="info-back" style="background:#5F5B35;">
@@ -84,7 +84,7 @@
             </div>
             <div class="col-sm-4 col-md-4">
                 <div class="ih-item square effect15 top_to_bottom">
-                    <a class="animsition-link" href="{{url_for('levels')}}">
+                    <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='GK')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/general_knowledge.jpg')}}" alt="img"></div>
                         <div class="info">
                             <div class="info-back">
@@ -98,7 +98,7 @@
             </div>
             <div class="col-sm-4 col-md-4">
                 <div class="ih-item square colored effect9 left_to_right">
-                    <a class="animsition-link" href="{{url_for('levels')}}">
+                    <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='FM')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/fluid.jpg')}}" alt="img"></div>
                         <div class="info">
                             <div class="info-back">
@@ -114,7 +114,7 @@
         <div class="row">
             <div class="col-sm-4 col-md-4">
                 <div class="ih-item square effect9 right_to_left">
-                    <a class="animsition-link" href="{{url_for('levels')}}">
+                    <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC=IAQ)}}">
                         <div class="img"><img src="{{url_for('static',filename='images/air-quality.jpg')}}" alt="img"></div>
                         <div class="info">
                             <div class="info-back">
@@ -128,7 +128,7 @@
             </div>
             <div class="col-sm-4 col-md-4">
                 <div class="ih-item square effect15 bottom_to_top">
-                    <a class="animsition-link" href="{{url_for('levels')}}">
+                    <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='AV')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/audio_visual.png')}}" alt="img"></div>
                         <div class="info">
                             <div class="info-back">
@@ -142,7 +142,7 @@
             </div>
             <div class="col-sm-4 col-md-4">
                 <div class="ih-item square effect9 left_to_right">
-                    <a class="animsition-link" href="{{url_for('levels')}}">
+                    <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='WT')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/workshop.jpg')}}" alt="img"></div>
                         <div class="info">
                             <div class="info-back">
@@ -158,7 +158,7 @@
         <div class="row">
             <div class="col-sm-4 col-md-4 col-sm-offset-4 col-md-offset-4">
                 <div class="ih-item square colored effect9 top_to_bottom">
-                    <a class="animsition-link" href="{{url_for('levels')}}">
+                    <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='EQ')}}">
                         <div class="img"><img src="" alt="img"></div>
                         <div class="info">
                             <div class="info-back">
