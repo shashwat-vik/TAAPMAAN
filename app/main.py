@@ -13,7 +13,7 @@ TEAM_STATS = {
     'E': {'SCORE':0, 'LPAT':'1111', 'TOPICS_PAT':'1111111111'},
     'F': {'SCORE':0, 'LPAT':'1111', 'TOPICS_PAT':'1111111111'}
 }
-CURR_STATS = {'TEAM':None, 'TOPIC':None, 'LEVEL':None, 'DOUBLE_HALF':False}
+CURR_STATS = {'TEAM':None, 'TOPIC':None, 'LEVEL':None, 'DOUBLE_HALF':None}
 
 TOPIC_MAPPING = {
                 'TH1':0,
@@ -98,6 +98,9 @@ def question(TEAM, TOPIC, LEVEL):
             topics_over=False
     if topics_over: NEXTP = url_for('score')
     else: NEXTP = url_for('topics', TEAM=CURR_STATS['TEAM'])
+
+    print(TEAM)
+    print(TEAM_STATS[TEAM])
     ##########################
 
     data = {
@@ -108,9 +111,10 @@ def question(TEAM, TOPIC, LEVEL):
             'LPAT':TEAM_STATS[TEAM]['LPAT'],
             'NEXTP':NEXTP,
             'AJAXPOST_URL':url_for('topics', TEAM=TEAM),
-            'DOUBLE_HALF':CURR_STATS['DOUBLE_HALF']
+            'DOUBLE_HALF':CURR_STATS['DOUBLE_HALF'],
+            'Q1_ANS_OPT':'1'
             }
-    return render_template("question2.html", data=data)
+    return render_template("question1.html", data=data)
 
 if __name__ == '__main__':
     app.run('0.0.0.0', debug=True)

@@ -46,11 +46,32 @@ cardlock_handler = function() {
         if (answer == selection) {
             $("#option_"+selection+".option button").addClass('right_answer');  // FOR TYPE 1
             $(".card-input .content").addClass('right_answer');                 // FOR TYPE 2
+            update_newscore(true);
         } else {
             $("#option_"+selection+".option button").addClass('wrong_answer');  // FOR TYPE 1
             $(".card-input .content").addClass('wrong_answer');                 // FOR TYPE 2
+            update_newscore(false);
         }
     };
+};
+
+// WOULD BE RAISED BY CARD-LOCK HANDLER FOR BOTH CORRECT AND FALSE
+var update_newscore = function(correct) {
+    curr_score = parseInt($(".insights .CURR_SCORE").attr('score'));
+    level = parseInt($(".insights .LEVEL").attr('level'));
+    double_half = $(".insights .DOUBLE_HALF").attr('status');
+    console.log(double_half);
+    if (correct) {
+        NEW_SCORE = 5*level+CURR_SCORE;
+        if (double_half == 'true') {
+            NEW_SCORE = 2*NEW_SCORE;
+        }
+    } else {
+        NEW_SCORE = CURR_SCORE;
+        if (double_half == 'true') {
+            NEW_SCORE = NEW_SCORE/2;
+        }
+    }
 };
 
 $(document).ready(function(e) {
@@ -133,6 +154,7 @@ $(document).ready(function(e) {
     // BEGINNING LIFELINE STATUS UPDATE
     LPAT = $(".insights .LPAT").attr("pattern");
     CURR_SCORE = parseInt($(".insights .CURR_SCORE").attr("score"));
+    NEW_SCORE = CURR_SCORE  // NEW_SCORE is never used directly. But if left uninitialized, leads to undefined.
     if (LPAT[0] == "0")
         $(".card-header .card-lifelines .fa-mortar-board").addClass('card-lifeline-disable');
     if (LPAT[1] == "0")
