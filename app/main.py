@@ -76,7 +76,10 @@ def levels(TEAM, TOPIC):
                 'NEXTP':url_for('question', TEAM=TEAM, TOPIC=TOPIC, LEVEL=-1),
                 'AJAXPOST_URL':url_for('levels', TEAM=TEAM, TOPIC=TOPIC)
                 }
-        return render_template("levels.html", data=data)
+        if TOPIC == 'AV':
+            return render_template("level_0.html", data=data)
+        else:
+            return render_template("levels.html", data=data)
     else:
         DOUBLE_HALF = request.form['DOUBLE_HALF']
         print("DOUBLE_HALF:",DOUBLE_HALF)
@@ -114,7 +117,10 @@ def question(TEAM, TOPIC, LEVEL):
             'DOUBLE_HALF':CURR_STATS['DOUBLE_HALF'],
             'Q1_ANS_OPT':'1'
             }
-    return render_template("question1.html", data=data)
+    if TOPIC == 'AV':
+        return render_template("question2.html", data=data)
+    else:
+        return render_template("question1.html", data=data)
 
 if __name__ == '__main__':
     app.run('0.0.0.0', debug=True)

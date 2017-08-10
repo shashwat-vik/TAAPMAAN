@@ -1,0 +1,64 @@
+{
+    border: 1px solid red !important;
+}
+
+body {
+    background: #009688;
+}
+
+.text {
+    padding-top: 16em;
+}
+
+.text > h1 {
+    font-family: 'Droid Serif', serif;
+    font-weight: normal;
+    font-size: 9em;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 12px #555555;
+}
+
+.text > h3 {
+    color: #FFFFFF;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: normal;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.7em;
+    opacity: 0.8;
+}
+
+.bottom > a {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 9px 20px 10px;
+    border: 3px solid #D8334A;
+    border-radius: 400px;
+    font-size: 1.5em;
+}
+
+.bottom > a:hover {
+  background-color: #D8334A;
+}
+
+#thalogo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 15px;
+  left: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.bottom > a,
+#thalogo path {
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}

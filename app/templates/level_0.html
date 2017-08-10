@@ -1,0 +1,53 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/system/bootstrap.min.css')}}">
+    <link href="{{url_for('static', filename='css/level_0.css')}}" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div class="row">
+            <div class="col-sm-12 text-center" mid="1">
+                <div class="text">
+                    <h3><b>LEVEL</b></h3>
+                    <h1>1</h1>
+                </div>
+                <div class="bottom" style="padding-top:1.8em;"><a href="#">&nbsp&nbspSTART&nbsp&nbsp</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<div class="insight" hidden>
+    <div class="NEXTP" url="{{data['NEXTP']}}" style="color:white">ABCD</div>
+    <div class="AJAXPOST_URL" url="{{data['AJAXPOST_URL']}}" style="color:white">ABCD</div>
+</div>
+
+<script type="text/javascript" src="{{url_for('static',filename='js/system/jquery-1.7.min.js')}}"></script>
+<script>
+var DOUBLE_HALF=false;
+$(document).ready(function(e) {
+    // UPDATE SERVER ABOUT DOUBLE HALF, THEN MAKE THE GET REQUEST TO NEW PAGE
+    $(".bottom a").on('click', function() {
+        NEXTP = $(".insight .NEXTP").attr("url");
+        NEXTP = NEXTP.substring(0, NEXTP.length-2);
+        level = $(this).parent().parent().attr("mid");
+        NEXTP = NEXTP+level;
+        AJAXPOST_URL = $(".insight .AJAXPOST_URL").attr("url")
+        // AFTER UPDATING SERVER, MAKE A GET REQUEST
+        $.ajax({
+                type : "POST",
+                url : AJAXPOST_URL,
+                data : {'DOUBLE_HALF':DOUBLE_HALF},
+                success : function(data, status, xhr) {
+                    console.log('POST UPDATE:'+data);
+                    window.location.href = NEXTP;
+                },
+                error: function(xhr, status, err) {
+                    alert("XHR: "+xhr+" STATUS: "+status+" ERR: "+err);
+                },
+                timeout:600
+            });
+    });
+});
+</script>
+</html>
