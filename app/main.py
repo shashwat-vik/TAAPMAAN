@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, url_for
 
 app = Flask(__name__)
@@ -94,6 +95,38 @@ def levels(TEAM, TOPIC):
         CURR_STATS['DOUBLE_HALF']=DOUBLE_HALF
         return "UPDATED"
 
+def get_question_data(TEAM, TOPIC, LEVEL):
+    if TOPIC == 'AV':
+        path = os.path.join(os.getcwd(),'static','questions','AV','DATA.txt')
+        with open(path, 'r') as f:
+            raw = f.read().strip()
+        raw = raw.split("\n")
+        text_data = [eval(i.strip()) for i in raw][ord(TEAM)-65]
+        data = {
+                'QUE':text_data[0],
+                'VID':"video/{0}".format(text_data[1]),
+                'ANS':text_data[2]
+        }
+        print(data)
+        return data
+    else:
+        path = os.path.join(os.getcwd(),'static','questions',TEAM, TOPIC,'DATA.txt')
+        print(path)
+        with open(path, 'r') as f:
+            raw = f.read().strip()
+        raw = raw.split("\n")
+        text_data = [eval(i.strip()) for i in raw][int(LEVEL)-1]
+        data = {
+                'QUE':text_data[0],
+                'OPT1':text_data[1],
+                'OPT2':text_data[2],
+                'OPT3':text_data[3],
+                'OPT4':text_data[4],
+                'ANS':text_data[5]
+        }
+        print(data)
+        return data
+
 @app.route("/question/<TEAM>/<TOPIC>/<LEVEL>")
 def question(TEAM, TOPIC, LEVEL):
     global CURR_STATS
@@ -122,9 +155,11 @@ def question(TEAM, TOPIC, LEVEL):
             'LPAT':TEAM_STATS[TEAM]['LPAT'],
             'NEXTP':NEXTP,
             'AJAXPOST_URL':url_for('topics', TEAM=TEAM),
-            'DOUBLE_HALF':CURR_STATS['DOUBLE_HALF'],
-            'Q1_ANS_OPT':'1'
+            'DOUBLE_HALF':CURR_STATS['DOUBLE_HALF']
             }
+    que_data = get_question_data(TEAM, TOPIC, LEVEL)
+    data.update(que_data)
+
     if TOPIC == 'AV':
         return render_template("question2.html", data=data)
     else:

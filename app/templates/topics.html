@@ -194,16 +194,17 @@
         <div class="row">
             <div class="col-sm-4 col-md-4 col-sm-offset-4 col-md-offset-4">
                 {%- if data['TOPICS_PAT'][9] == '1' %}
-                <div class="ih-item square colored effect9 top_to_bottom">
+                <div class="ih-item square effect9 top_to_bottom">
                 {% else %}
-                <div class="ih-item square colored top_to_bottom topic_used">
+                <div class="ih-item square top_to_bottom topic_used">
                 {% endif -%}
                     <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='EQ')}}">
-                        <div class="img"><img src="" alt="img"></div>
+                        <div class="img"><img src="{{url_for('static',filename='images/equipments.jpg')}}" alt="img"></div>
                         <div class="info">
                             <div class="info-back">
                                 <h3>EQUIPMENTS</h3>
                                 <p>Description goes here</p>
+                                <button style="margin-top:1%;" class="btn btn-default"><b>ENTER</b></button>
                             </div>
                         </div>
                     </a>

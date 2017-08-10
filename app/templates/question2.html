@@ -29,11 +29,11 @@
                         </div>
                     </div>
                     <div class="card-question">
-                        <p>Who is the Prime Minister of India ?</p>
+                        <p>{{data['QUE']}}</p>
                     </div>
                     <div class="card-multimedia text-center">
                         <video class="content" controls>
-                            <source src="{{url_for('static', filename='')}}" width="400" type="video/webm">
+                            <source src="{{url_for('static', filename=data['VID'])}}" width="400" type="video/webm">
                         </video>
                     </div>
                     <div class="card-input text-center">
@@ -53,7 +53,7 @@
     <div class="TEAM" team="{{data['TEAM']}}" style="color:white;">ABCD</div>
     <div class="CURR_SCORE" score="{{data['CURR_SCORE']}}" style="color:white;">ABCD</div>
     <div class="LEVEL" level="{{data['LEVEL']}}" style="color:white;">ABCD</div>
-    <div class="ANS_OPT" secanswer="{{data['Q1_ANS_OPT']}}" style="color:white;">ABCD</div>
+    <div class="ANS_OPT" secanswer="{{data['ANS']}}" style="color:white;">ABCD</div>
     <div class="LPAT" pattern="{{data['LPAT']}}" style="color:white;">ABCD</div>
     <div class="AJAXPOST_URL" url="{{data['AJAXPOST_URL']}}" style="color:white;">ABCD</div>
     <div class="DOUBLE_HALF" status="{{data['DOUBLE_HALF']}}" style="color:white;">ABCD</div>
