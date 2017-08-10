@@ -42,7 +42,15 @@ def front():
 
 @app.route("/score")
 def score():
-    return render_template("score.html")
+    data = {
+        'A':TEAM_STATS['A']['SCORE'],
+        'B':TEAM_STATS['B']['SCORE'],
+        'C':TEAM_STATS['C']['SCORE'],
+        'D':TEAM_STATS['D']['SCORE'],
+        'E':TEAM_STATS['E']['SCORE'],
+        'F':TEAM_STATS['F']['SCORE'],
+    }
+    return render_template("score.html", data=data)
 
 @app.route("/topics/<TEAM>", methods=['GET', 'POST'])
 def topics(TEAM):

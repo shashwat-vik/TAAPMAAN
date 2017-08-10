@@ -1,4 +1,4 @@
-var MYTIMER, TIMER_STARTED=null;
+var MYTIMER, TIMER_STARTED=null, REVIVAL_ACTIVE=false;
 var CURR_SCORE=null, NEW_SCORE=null, LPAT=null;
 
 var ontick_handler = function(ms) {
@@ -74,6 +74,11 @@ var update_newscore = function(correct) {
     }
 };
 
+var replace_string = function(str, idx, c) {
+    s = str.substr(0, idx) + c + str.substr(idx + 1);
+    return s;
+}
+
 $(document).ready(function(e) {
     // TIMER HANDLER. ACTIVATE TIMER ON CLICK, IF NOT ALREADY TICKING.
     $(".card-header .card-timer").click(function() {
@@ -142,7 +147,6 @@ $(document).ready(function(e) {
                 data : data,
                 success : function(data, status, xhr) {
                     console.log('POST UPDATE:'+data);
-                    //window.location.href = url;
                 },
                 error: function(xhr, status, err) {
                     alert("XHR: "+xhr+" STATTUS: "+status+" ERR: "+err);
@@ -164,28 +168,63 @@ $(document).ready(function(e) {
     if (LPAT[3] == "0" || CURR_SCORE < 75)
         $(".card-header .card-lifelines .fa-history").addClass('card-lifeline-disable');
 
+    double_half = $(".insights .DOUBLE_HALF").attr('status');
+    // DISABLE ALL LIFELINES IF DOUBLE_HALF IS 'true', WITHOUT AFFECTING SERVER VALUES
+    if (double_half == 'true') {
+        $(".card-header .card-lifelines .fa-mortar-board").removeClass('card-lifeline-disable').addClass('card-lifeline-disable');
+        $(".card-header .card-lifelines .fa-smile-o").removeClass('card-lifeline-disable').addClass('card-lifeline-disable');
+        $(".card-header .card-lifelines .fa-subscript").removeClass('card-lifeline-disable').addClass('card-lifeline-disable');
+        $(".card-header .card-lifelines .fa-history").removeClass('card-lifeline-disable').addClass('card-lifeline-disable');
+    }
+
     // ASSIGN LIFELINE HANDLERS
     $(".card-header .card-lifelines .fa-mortar-board").on('click', function() {     // ASK WISE GUY
-        // ONLY IF LIFELINE IS ENABLED AND CARD-LOCK IS OPEN
-        if (!$(this).hasClass('card-lifeline-disable') && $(".card-lock").find(".fa-unlock").length) {
-            MYTIMER.pause();
-            $(this).addClass('card-lifeline-disable')
+        if (REVIVAL_ACTIVE && $(this).hasClass('card-lifeline-disable')) {
+            $(this).removeClass('card-lifeline-disable');
+            REVIVAL_ACTIVE=false;
+        } else {
+            // ONLY IF LIFELINE IS ENABLED AND CARD-LOCK IS OPEN
+            if (!$(this).hasClass('card-lifeline-disable') && $(".card-lock").find(".fa-unlock").length) {
+                MYTIMER.pause();
+                $(this).addClass('card-lifeline-disable')
+                LPAT = replace_string(LPAT, 0, 0);
+            }
         }
     });
     $(".card-header .card-lifelines .fa-smile-o").on('click', function() {          // ASK FRIEND
-        // ONLY IF LIFELINE IS ENABLED AND CARD-LOCK IS OPEN
-        if (!$(this).hasClass('card-lifeline-disable') && $(".card-lock").find(".fa-unlock").length) {
-            MYTIMER.pause();
-            $(this).addClass('card-lifeline-disable');
+        if (REVIVAL_ACTIVE && $(this).hasClass('card-lifeline-disable')) {
+            $(this).removeClass('card-lifeline-disable');
+            REVIVAL_ACTIVE=false;
+        } else {
+            // ONLY IF LIFELINE IS ENABLED AND CARD-LOCK IS OPEN
+            if (!$(this).hasClass('card-lifeline-disable') && $(".card-lock").find(".fa-unlock").length) {
+                MYTIMER.pause();
+                $(this).addClass('card-lifeline-disable');
+                LPAT = replace_string(LPAT, 1, 0);
+            }
         }
     });
     $(".card-header .card-lifelines .fa-subscript").on('click', function() {        // DOUBLE TAKE
-        // ONLY IF LIFELINE IS ENABLED AND CARD-LOCK IS CLOSED
-        if (!$(this).hasClass('card-lifeline-disable') && $(".card-lock").find(".fa-lock").length) {
-            $(".card-lock").children('i').removeClass('fa-lock');
-            $(".card-lock").children('i').addClass('fa-unlock');
-            $(this).addClass('card-lifeline-disable');
-            // NO NEED TO PAUSE TIMER, AS COMING HERE ALREADY IMPLIES THAT ITS PAUSED
+        if (REVIVAL_ACTIVE && $(this).hasClass('card-lifeline-disable')) {
+            $(this).removeClass('card-lifeline-disable');
+            REVIVAL_ACTIVE=false;
+        } else {
+            // ONLY IF LIFELINE IS ENABLED AND CARD-LOCK IS CLOSED
+            if (!$(this).hasClass('card-lifeline-disable') && $(".card-lock").find(".fa-lock").length) {
+                $(".card-lock").children('i').removeClass('fa-lock');
+                $(".card-lock").children('i').addClass('fa-unlock');
+                $(this).addClass('card-lifeline-disable');
+                LPAT = replace_string(LPAT, 2, 0);
+                // NO NEED TO PAUSE TIMER, AS COMING HERE ALREADY IMPLIES THAT ITS PAUSED
+            }
         }
+    });
+    $(".card-header .card-lifelines .fa-history").on('click', function() {          // REVIVAL
+        if (!$(this).hasClass('card-lifeline-disable') && $(".card-lock").find(".fa-unlock").length) {
+            REVIVAL_ACTIVE = true;
+            LPAT = replace_string(LPAT, 3, 0);
+            $(this).addClass('card-lifeline-disable');
+            MYTIMER.pause();
+        };
     });
 });
