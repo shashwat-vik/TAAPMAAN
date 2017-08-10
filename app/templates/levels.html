@@ -6,50 +6,83 @@
 </head>
 <body>
     <div id="container">
-        <div class="panel" id="one" style="background: url({{url_for('static', filename='images/1.jpg')}})">
+        <div class="panel" id="one" mid="1" style="background: url({{url_for('static', filename='images/1.jpg')}})">
             <div class="text">
                 <h3><b>LEVEL</b></h3>
                 <h1>1</h1>
             </div>
             <div class="bottom_0"><a href="#">DOUBLE - HALF</a></div>
-            <div class="bottom"><a href="{{url_for('question', TEAM=data['TEAM'], TOPIC=data['TOPIC'], LEVEL=1)}}">&nbsp&nbspSTART&nbsp&nbsp</a></div>
+            <div class="bottom"><a href="#">&nbsp&nbspSTART&nbsp&nbsp</a></div>
         </div>
-        <div class="panel" id="two" style="background: url({{url_for('static', filename='images/2.jpg')}})">
+        <div class="panel" id="two" mid="2" style="background: url({{url_for('static', filename='images/2.jpg')}})">
             <div class="text">
                 <h3><b>LEVEL</b></h3>
                 <h1>2</h1>
             </div>
             <div class="bottom_0"><a href="#">DOUBLE - HALF</a></div>
-            <div class="bottom"><a href="{{url_for('question', TEAM=data['TEAM'], TOPIC=data['TOPIC'], LEVEL=2)}}">&nbsp&nbspSTART&nbsp&nbsp</a></div>
+            <div class="bottom"><a href="#">&nbsp&nbspSTART&nbsp&nbsp</a></div>
         </div>
-        <div class="panel" id="three" style="background: url({{url_for('static', filename='images/3.jpg')}})">
+        <div class="panel" id="three" mid="3" style="background: url({{url_for('static', filename='images/3.jpg')}})">
             <div class="text">
                 <h3><b>LEVEL</b></h3>
                 <h1>3</h1>
             </div>
             <div class="bottom_0"><a href="#">DOUBLE - HALF</a></div>
-            <div class="bottom"><a href="{{url_for('question', TEAM=data['TEAM'], TOPIC=data['TOPIC'], LEVEL=3)}}">&nbsp&nbspSTART&nbsp&nbsp</a></div>
+            <div class="bottom"><a href="#">&nbsp&nbspSTART&nbsp&nbsp</a></div>
         </div>
-        <div class="panel" id="four" style="background: url({{url_for('static', filename='images/4.jpg')}})">
+        <div class="panel" id="four" mid="4" style="background: url({{url_for('static', filename='images/4.jpg')}})">
             <div class="text">
                 <h3><b>LEVEL</b></h3>
                 <h1>4</h1>
             </div>
             <div class="bottom_0"><a href="#">DOUBLE - HALF</a></div>
-            <div class="bottom"><a href="{{url_for('question', TEAM=data['TEAM'], TOPIC=data['TOPIC'], LEVEL=4)}}">&nbsp&nbspSTART&nbsp&nbsp</a></div>
+            <div class="bottom"><a href="#">&nbsp&nbspSTART&nbsp&nbsp</a></div>
         </div>
     </div>
 </body>
+
+<div class="insight" hidden>
+    <div class="NEXTP" url="{{data['NEXTP']}}" style="color:white">ABCD</div>
+    <div class="AJAXPOST_URL" url="{{data['AJAXPOST_URL']}}" style="color:white">ABCD</div>
+</div>
+
 <script type="text/javascript" src="{{url_for('static',filename='js/levels.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static',filename='js/system/jquery-1.7.min.js')}}"></script>
 <script>
+
+var DOUBLE_HALF=false;
 $(document).ready(function(e) {
     $(".panel .bottom_0 a").on('click', function() {
         if ($(this).hasClass('option_active')) {
             $(this).removeClass('option_active');
+            DOUBLE_HALF=false;
         } else {
             $(this).addClass('option_active');
+            DOUBLE_HALF=true;
         }
+    });
+
+    // UPDATE SERVER ABOUT DOUBLE HALF, THEN MAKE THE GET REQUEST TO NEW PAGE
+    $(".panel .bottom a").on('click', function() {
+        NEXTP = $(".insight .NEXTP").attr("url")
+        NEXTP = NEXTP.substring(0, NEXTP.length-2);
+        level = $(this).parent().parent().attr("mid");
+        NEXTP = NEXTP+level;
+        AJAXPOST_URL = $(".insight .AJAXPOST_URL").attr("url")
+        // AFTER UPDATING SERVER, MAKE A GET REQUEST
+        $.ajax({
+                type : "POST",
+                url : AJAXPOST_URL,
+                data : {'DOUBLE_HALF':DOUBLE_HALF},
+                success : function(data, status, xhr) {
+                    console.log('POST UPDATE:'+data);
+                    window.location.href = NEXTP;
+                },
+                error: function(xhr, status, err) {
+                    alert("XHR: "+xhr+" STATUS: "+status+" ERR: "+err);
+                },
+                timeout:600
+            });
     });
 });
 </script>

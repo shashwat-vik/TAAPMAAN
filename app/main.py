@@ -13,7 +13,7 @@ TEAM_STATS = {
     'E': {'SCORE':0, 'LPAT':'1111', 'TOPICS_PAT':'1111111111'},
     'F': {'SCORE':0, 'LPAT':'1111', 'TOPICS_PAT':'1111111111'}
 }
-CURR_STATS = {'TEAM':None, 'TOPIC':None, 'LEVEL':None}
+CURR_STATS = {'TEAM':None, 'TOPIC':None, 'LEVEL':None, 'DOUBLE_HALF':False}
 
 TOPIC_MAPPING = {
                 'TH1':0,
@@ -63,17 +63,25 @@ def topics(TEAM):
         print("UPDATED", request.form)
         return "UPDATED"
 
-@app.route("/levels/<TEAM>/<TOPIC>")
+@app.route("/levels/<TEAM>/<TOPIC>", methods=['GET', 'POST'])
 def levels(TEAM, TOPIC):
     global CURR_STATS
-    # UPDATE AGAIN JUST TO KEEP THINGS IN SYNC UNTIL NOT EVERYTHING IS VERIFIED.
-    CURR_STATS['TEAM'], CURR_STATS['TOPIC'] = TEAM, TOPIC
-    update_topics_used(TEAM, TOPIC)
-    data = {
-            'TEAM':CURR_STATS['TEAM'],
-            'TOPIC':CURR_STATS['TOPIC']
-            }
-    return render_template("levels.html", data=data)
+    if request.method == 'GET':
+        # UPDATE AGAIN JUST TO KEEP THINGS IN SYNC UNTIL NOT EVERYTHING IS VERIFIED.
+        CURR_STATS['TEAM'], CURR_STATS['TOPIC'] = TEAM, TOPIC
+        update_topics_used(TEAM, TOPIC)
+        data = {
+                'TEAM':CURR_STATS['TEAM'],
+                'TOPIC':CURR_STATS['TOPIC'],
+                'NEXTP':url_for('question', TEAM=TEAM, TOPIC=TOPIC, LEVEL=-1),
+                'AJAXPOST_URL':url_for('levels', TEAM=TEAM, TOPIC=TOPIC)
+                }
+        return render_template("levels.html", data=data)
+    else:
+        DOUBLE_HALF = request.form['DOUBLE_HALF']
+        print("DOUBLE_HALF:",DOUBLE_HALF)
+        CURR_STATS['DOUBLE_HALF']=DOUBLE_HALF
+        return "UPDATED"
 
 @app.route("/question/<TEAM>/<TOPIC>/<LEVEL>")
 def question(TEAM, TOPIC, LEVEL):
@@ -99,7 +107,8 @@ def question(TEAM, TOPIC, LEVEL):
             'CURR_SCORE':TEAM_STATS[TEAM]['SCORE'],
             'LPAT':TEAM_STATS[TEAM]['LPAT'],
             'NEXTP':NEXTP,
-            'AJAXPOST_URL':url_for('topics', TEAM=TEAM)
+            'AJAXPOST_URL':url_for('topics', TEAM=TEAM),
+            'DOUBLE_HALF':CURR_STATS['DOUBLE_HALF']
             }
     return render_template("question2.html", data=data)
 
