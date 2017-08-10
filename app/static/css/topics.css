@@ -22,6 +22,10 @@
     margin: 1em;
 }
 
+.topic_used {
+    opacity: 0.2;
+}
+
 body {
   position: relative;
   padding-left: 50px;
@@ -109,6 +113,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   padding-top: 30px;
   background: #333333;
 }
+
+.ih-item.square.topic_used .info .info-back {
+  opacity: 0;
+}
+
 .ih-item.square.effect9 .info h3 {
   text-transform: uppercase;
   color: #fff;

@@ -25,7 +25,11 @@
         </div>
         <div class="row">
             <div class="col-sm-4 col-md-4">
+                {%- if data['TOPICS_PAT'][0] == '1' %}
                 <div class="ih-item square effect9 right_to_left">
+                {% else %}
+                <div class="ih-item square right_to_left topic_used">
+                {% endif -%}
                     <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='TH1')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/atom.jpg')}}" alt="img"></div>
                         <div class="info">
@@ -39,7 +43,11 @@
                 </div>
             </div>
             <div class="col-sm-4 col-md-4">
+                {%- if data['TOPICS_PAT'][1] == '1' %}
                 <div class="ih-item square effect9 bottom_to_top">
+                {% else %}
+                <div class="ih-item square bottom_to_top topic_used">
+                {% endif -%}
                     <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='TH2')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/atom.jpg')}}" alt="img"></div>
                         <div class="info">
@@ -53,7 +61,11 @@
                 </div>
             </div>
             <div class="col-sm-4 col-md-4">
+                {%- if data['TOPICS_PAT'][2] == '1' %}
                 <div class="ih-item square effect9 left_to_right">
+                {% else %}
+                <div class="ih-item square left_to_right topic_used">
+                {% endif -%}
                     <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='TH3')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/atom.jpg')}}" alt="img"></div>
                         <div class="info">
@@ -69,7 +81,11 @@
         </div>
         <div class="row">
             <div class="col-sm-4 col-md-4">
+                {%- if data['TOPICS_PAT'][3] == '1' %}
                 <div class="ih-item square effect9 right_to_left">
+                {% else %}
+                <div class="ih-item square right_to_lef topic_used">
+                {% endif -%}
                     <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='BE')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/electrical.jpg')}}" alt="img"></div>
                         <div class="info">
@@ -83,7 +99,11 @@
                 </div>
             </div>
             <div class="col-sm-4 col-md-4">
+                {%- if data['TOPICS_PAT'][4] == '1' %}
                 <div class="ih-item square effect15 top_to_bottom">
+                {% else %}
+                <div class="ih-item square top_to_bottom topic_used">
+                {% endif -%}
                     <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='GK')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/general_knowledge.jpg')}}" alt="img"></div>
                         <div class="info">
@@ -97,7 +117,11 @@
                 </div>
             </div>
             <div class="col-sm-4 col-md-4">
+                {%- if data['TOPICS_PAT'][5] == '1' %}
                 <div class="ih-item square colored effect9 left_to_right">
+                {% else %}
+                <div class="ih-item square colored left_to_right topic_used">
+                {% endif -%}
                     <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='FM')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/fluid.jpg')}}" alt="img"></div>
                         <div class="info">
@@ -113,8 +137,12 @@
         </div>
         <div class="row">
             <div class="col-sm-4 col-md-4">
+                {%- if data['TOPICS_PAT'][6] == '1' %}
                 <div class="ih-item square effect9 right_to_left">
-                    <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC=IAQ)}}">
+                {% else %}
+                <div class="ih-item square right_to_left topic_used">
+                {% endif -%}
+                    <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='IAQ')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/air-quality.jpg')}}" alt="img"></div>
                         <div class="info">
                             <div class="info-back">
@@ -127,7 +155,11 @@
                 </div>
             </div>
             <div class="col-sm-4 col-md-4">
+                {%- if data['TOPICS_PAT'][7] == '1' %}
                 <div class="ih-item square effect15 bottom_to_top">
+                {% else %}
+                <div class="ih-item square bottom_to_top topic_used">
+                {% endif -%}
                     <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='AV')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/audio_visual.png')}}" alt="img"></div>
                         <div class="info">
@@ -141,7 +173,11 @@
                 </div>
             </div>
             <div class="col-sm-4 col-md-4">
+                {%- if data['TOPICS_PAT'][8] == '1' %}
                 <div class="ih-item square effect9 left_to_right">
+                {% else %}
+                <div class="ih-item square left_to_right topic_used">
+                {% endif -%}
                     <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='WT')}}">
                         <div class="img"><img src="{{url_for('static',filename='images/workshop.jpg')}}" alt="img"></div>
                         <div class="info">
@@ -157,7 +193,11 @@
         </div>
         <div class="row">
             <div class="col-sm-4 col-md-4 col-sm-offset-4 col-md-offset-4">
+                {%- if data['TOPICS_PAT'][9] == '1' %}
                 <div class="ih-item square colored effect9 top_to_bottom">
+                {% else %}
+                <div class="ih-item square colored top_to_bottom topic_used">
+                {% endif -%}
                     <a class="animsition-link" href="{{url_for('levels', TEAM=data['TEAM'], TOPIC='EQ')}}">
                         <div class="img"><img src="" alt="img"></div>
                         <div class="info">

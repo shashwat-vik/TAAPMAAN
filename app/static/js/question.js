@@ -109,7 +109,7 @@ $(document).ready(function(e) {
     // NEXT PAGE CLICK HANDLER BY POSTING DATA
     // (HIGHLY DANGEROUS AS ITS ASSUMES REQUEST DATA IS COMPLETED IN THOSE 2 SEC BEFORE 'animsition' DURATION ENDS)
     $(".card-header .card-utils .fa-arrow-right").on('click', function() {
-        url = $(".insights .NEXTP").attr("url");
+        url = $(".insights .AJAXPOST_URL").attr("url");
         data = {
             'NEW_SCORE':NEW_SCORE,
             'LPAT':LPAT
@@ -125,7 +125,8 @@ $(document).ready(function(e) {
                 },
                 error: function(xhr, status, err) {
                     alert("XHR: "+xhr+" STATTUS: "+status+" ERR: "+err);
-                }
+                },
+                timeout:600
             });
     });
 
