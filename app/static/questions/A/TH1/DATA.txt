@@ -1,0 +1,4 @@
+["Power available at the shaft of an I.C engine is known is","Net indicated horse power","Pumping power","Indicated horse power","Brake horse power",4]
+["Vertical lines in psychrometric chart indicate constant","Sensible heat and latent heat factor","Wet bulb temperature and latent heat factor","Dry bulb temperature and sensible heat  factor","Latent heat and dry bulb temperature factor",3]
+["Which of the following characteristics applies to thermoelectric refrigeration?","System is complicated and hard to service","System is not very efficient"," System requires a large charge of refrigerant","Refrigerant charge must be carefully measured",2]
+["If the load on a compressor increases, suction:","Pressure will decrease and discharge pressure will increase","Pressure will increase and discharge pressure will decrease","and discharge pressure will increase","and discharge pressure will decrease",4]

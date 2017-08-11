@@ -85,7 +85,7 @@ def levels(TEAM, TOPIC):
                 'NEXTP':url_for('question', TEAM=TEAM, TOPIC=TOPIC, LEVEL=-1),
                 'AJAXPOST_URL':url_for('levels', TEAM=TEAM, TOPIC=TOPIC)
                 }
-        if TOPIC == 'AV':
+        if TOPIC in ('AV','EQ'):
             return render_template("level_0.html", data=data)
         else:
             return render_template("levels.html", data=data)
@@ -96,21 +96,36 @@ def levels(TEAM, TOPIC):
         return "UPDATED"
 
 def get_question_data(TEAM, TOPIC, LEVEL):
-    if TOPIC == 'AV':
-        path = os.path.join(os.getcwd(),'static','questions','AV','DATA.txt')
+    if TOPIC in ('AV','EQ') or (TOPIC == 'GK' and LEVEL == '3'):
+        # GET APPROPRIATE QUE FILE PATH (I KNOW IT MESSY, AND NON-PYTHONIC)
+        if TOPIC == 'GK':
+            path = os.path.join(os.getcwd(),'app','static','questions',TEAM, TOPIC,'DATA.txt')
+        else:
+            path = os.path.join(os.getcwd(),'app','static','questions','ALTER',TOPIC,'DATA.txt')
         with open(path, 'r') as f:
             raw = f.read().strip()
         raw = raw.split("\n")
-        text_data = [eval(i.strip()) for i in raw][ord(TEAM)-65]
+        # GET APPROPRIATE MEDIA PATH
+        MEDIA, TYPE = None, None
+        if TOPIC == 'AV':
+            text_data = [eval(i.strip()) for i in raw][ord(TEAM)-65]
+            MEDIA, TYPE = url_for('static', filename="questions/ALTER/AV/video/{0}".format(text_data[1])), 'VID'
+        elif TOPIC == 'EQ':
+            text_data = [eval(i.strip()) for i in raw][ord(TEAM)-65]
+            MEDIA, TYPE = url_for('static', filename="questions/ALTER/EQ/images/{0}".format(text_data[1])), 'IMG'
+        elif TOPIC == 'GK':
+            text_data = [eval(i.strip()) for i in raw][int(LEVEL)-1]
+            MEDIA, TYPE = url_for('static', filename="questions/{0}/GK/{1}".format(TEAM, text_data[1])), 'IMG'
         data = {
                 'QUE':text_data[0],
-                'VID':"video/{0}".format(text_data[1]),
+                'MEDIA':MEDIA,
+                'TYPE':TYPE,
                 'ANS':text_data[2]
-        }
+                }
         #print(data)
         return data
     else:
-        path = os.path.join(os.getcwd(),'static','questions',TEAM, TOPIC,'DATA.txt')
+        path = os.path.join(os.getcwd(),'app','static','questions',TEAM, TOPIC,'DATA.txt')
         print(path)
         with open(path, 'r') as f:
             raw = f.read().strip()
@@ -123,7 +138,7 @@ def get_question_data(TEAM, TOPIC, LEVEL):
                 'OPT3':text_data[3],
                 'OPT4':text_data[4],
                 'ANS':text_data[5]
-        }
+                }
         #print(data)
         return data
 
@@ -160,7 +175,7 @@ def question(TEAM, TOPIC, LEVEL):
     que_data = get_question_data(TEAM, TOPIC, LEVEL)
     data.update(que_data)
 
-    if TOPIC == 'AV':
+    if TOPIC in ('AV','EQ') or (TOPIC == 'GK' and LEVEL == '3'):
         return render_template("question2.html", data=data)
     else:
         return render_template("question1.html", data=data)

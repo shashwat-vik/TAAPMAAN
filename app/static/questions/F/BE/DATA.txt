@@ -1,0 +1,4 @@
+["Two transformers in parallel will share their load according to their","efficiency","ratings","per unit impedance","both b & c",3]
+["The commutator of a dc motor serve the purpose of","changing ac into dc","converting dc into ac","reducing friction ","avoiding arc at the brushes",2]
+["In a synchronous motor torque or load angle ………… with increase in load ","increases","decreases","remains unaffected","none of these ",1]
+["The protective device that takes care of non electrical faults in transformer is known as","Buchholz’s relay","breather","bushings","conservator",1]

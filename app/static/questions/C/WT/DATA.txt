@@ -1,0 +1,4 @@
+["Which of the following is not a moulding defect?","Misrun","Porosity","Cold cracking","Slag inclusion",3]
+["Which of the following is a disadvantage for cold working?","Poor surface finish","Poor dimensional control","High cost","Limited materials applicable",4] 
+["In Iron-Carbon diagram, “Upper critical temperature for hypereutectoid steel” is also denoted by","A1 line","A0 line","A3 line","ACM line",4] 
+["For welding thin workpieces of aluminium sheet which welding process is preferred?","Manual metal arc welding","Gas metal arc welding","Gas Tungsten arc welding","Submerged arc welding",3]

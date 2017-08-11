@@ -1,0 +1,4 @@
+["Synchronous condensers are used to","improve the starting torque","improve the power factor","reduce hunting","all of the above ",2]
+["The most powerful electromagnet in a full load DC machine is","flux produced by field winding","flux produced by armature reaction","flux produced by interpoles","flux produced by compensating windings",1]
+["If a shunt motor is started with its field winding open then"," It will rotate at the same speed as that with its field winding closed","It will rotate at less speed as that with its field winding closed","It will rotate at dangerously high speed"," None of these",3]
+["For the parallel operation of three phase transformers, which among the following connection is not applicable? ","&Delta; - &Delta; to Y - Y","Y - &Delta; to &Delta; - Y","Y - Y to &Delta; - &Delta;","None of these",4]

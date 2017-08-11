@@ -1,0 +1,7 @@
+["A liquid can be called ‘Thixotropic’ when","Viscosity increases with the duration of time","Viscosity decreases with the duration of time","Viscosity first increases then decreases with the duration of time","Viscosity first decreases then increases with the duration of time",2]
+["In Red wood viscometer:","Absolute value of viscosity is determined","Part of the head of fluid is utilized in overcoming friction","Fluid discharges through orifice with negligible velocity","Comparison of viscosity is done",4]
+["Length of mercury column at a place at an attitude will vary with respect to that at ground in a","Linear relation","Hyperbolic relation","Parabolic relation","Manner first slowly and then steeply",4]
+["A small plastic boat loaded with pieces of steel rods is floating in a bath tub. If the cargo is dumped into the water, the water level of tub will","Rise","Fall","Remains same","Rise and then fall",2]
+ 
+ 
+

@@ -1,0 +1,6 @@
+["A ballon lifting in air follows the","Law of gravitation","Archimedes principle","Principle of buoyancy","All of above",2]
+["In series pipe applications","Head loss through each pipe added to obtain the total head loss","Head loss is same through each pipe","Friction factor is assumed for each pipe","Flow increases",1]
+["Which one of the following helps in avoiding cavitation in centrifugal pump?","Low suction pressure","Low delivery pressure","High suction pressure","High delivery pressure",3]
+["Head loss in case of hot water flow through a pipe compared to cold water flow will be","same","more","less","unpredictable",3]
+ 
+

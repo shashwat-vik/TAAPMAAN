@@ -1,0 +1,6 @@
+["Identify the HVAC brand shown in the advertisement.", "A.mp4", "Hitachi"]
+["Identify the HVAC brand shown in the advertisement.", "B.mp4", "Haier"]
+["Identify the HVAC brand shown in the advertisement.", "C.mp4", "Trane"]
+["Identify the HVAC brand shown in the advertisement.", "D.mp4", "Kenwood"]
+["Identify the HVAC brand shown in the advertisement.", "E.mp4", "Orient"]
+["Identify the HVAC brand shown in the advertisement.", "F.mp4", "Ariston"]

@@ -1,0 +1,4 @@
+["Energy Performance Ratio ( E.P.R. ) is","same as C.O.P.","reciprocal of C.O.P.","twice of C.O.P.","one third of C.O.P.",1]
+["Alignment Circle in a psychrometry chart corresponds to","26 degree C DBT and 50% RH","50 degree C DBT and 26% RH","50 degree C DBT and 50% RH","29 degree C DBT and 56% RH",1]
+["Dehumidification of air is only possible when effective surface of cooling coil is","less than DPT of entering air","more than DPT of entering air","more than  WBT of entering air","less than DBT of entering air",1]
+["What is the purpose of a suction line accumulator?","To prevent liquid flood-back","To protect the compressor from liquid flood-back","To control refrigerant flow into the evaporator","To stop condenser flood-back",2]

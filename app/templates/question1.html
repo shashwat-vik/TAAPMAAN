@@ -20,7 +20,7 @@
                                 <i class="fa fa-history fa-2x" style="padding:0.6em 0.6em 0 0;"></i>
                             </div>
                             <div class="col-md-6 card-timer">
-                                    0 0 : 3 0
+                                    0 0 : 6 0
                             </div>
                             <div class="col-md-3 card-utils">
                                 <i class="fa fa-arrow-right fa-2x pull-right animsition-link" href="{{data['NEXTP']}}" style="padding:0.6em 0.6em 0 0;"></i>
@@ -29,20 +29,20 @@
                         </div>
                     </div>
                     <div class="card-question">
-                        <p>{{data['QUE']}}</p>
+                        <p>{{data['QUE'] | safe}}</p>
                     </div>
                     <div class="card-options">
                         <div class="option" id="option_1">
-                            <button type="button" class="btn btn-lg btn-block">{{data['OPT1']}}</button>
+                            <button type="button" class="btn btn-lg btn-block">{{data['OPT1'] | safe}}</button>
                         </div>
                         <div class="option" id="option_2">
-                            <button type="button" class="btn btn-lg btn-block">{{data['OPT2']}}</button>
+                            <button type="button" class="btn btn-lg btn-block">{{data['OPT2'] | safe}}</button>
                         </div>
                         <div class="option" id="option_3">
-                            <button type="button" class="btn btn-lg btn-block">{{data['OPT3']}}</button>
+                            <button type="button" class="btn btn-lg btn-block">{{data['OPT3'] | safe}}</button>
                         </div>
                         <div class="option" id="option_4">
-                            <button type="button" class="btn btn-lg btn-block">{{data['OPT4']}}</button>
+                            <button type="button" class="btn btn-lg btn-block">{{data['OPT4'] | safe}}</button>
                         </div>
                     </div>
                     <div class="card-lock text-center">

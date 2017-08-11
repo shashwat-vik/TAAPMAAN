@@ -1,0 +1,4 @@
+["Which Indian language became third most common language in the parliament of Cannada after English and French?","Marathi","Bengali","Punjabi","Telugu",3]
+["What   does  IGBC  stands for��","Indian Green Building Council","Indian Green Building Confederation","Indo Green Build Council","Indian Green Building Conference",1]
+["Name the company whose logo is linked with this image","E.png","Climate Master"]
+["Name the first Indian bank which launched bio-degradable prepaid  gift cards on the occasion of World Environment Day, 2017","ICICI bank","HDFC bank","Axis bank","Kotak Mahindra Bank",3]

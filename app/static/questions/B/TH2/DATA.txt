@@ -1,0 +1,4 @@
+["Subcooling of refrigerant","increases COP","decreases COP","have no effect","dependent on refrigerant",1]
+["A duct is classified as Low Pressure Duct if static pressure is","More than 50mm of water gauge","Less than 120 mm of water gauge","Less than 50 mm of water gauge","Equal to 120mm of water",3]
+["As an oil becomes more diluted with refrigerant, its viscosity:","Increases","Decreases","Remains the same","None of the above",2]
+["The principle reason for drawing a deep vacuum on a refrigeration system is to:","Lower the head pressure","Remove refrigerant in the system","Remove air","Remove moisture",4]

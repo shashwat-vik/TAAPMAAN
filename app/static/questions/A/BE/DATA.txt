@@ -1,0 +1,4 @@
+["In which transformer  the tertiary winding is used ","star delta","delta star","delta delta","star star",4]
+["Among which of the following consumers is penalty imposed for low power factor? ","Residential and commercial consumers","Industrial consumers","Agricultural consumers","All of the above",2]
+["For an economical point what kind of parallel operation of transformers  is more preferred","equivalent impedance must be directly proportional to KVA rating ","equivalent impedance must be inversely proportional to KVA rating "," equivalent impedance must be directly proportional to square of KVA rating"," none of these",2]
+["Which of the following relation is correct for synchronous machines ","Xd=Xq"," Xd < Xq","Xd>Xq","none of these",3]

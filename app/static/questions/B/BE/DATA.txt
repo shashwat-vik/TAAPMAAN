@@ -1,0 +1,4 @@
+["The essential condition for parallel operation of transformer is ","opposite polarities are connected together ","equivalent impedance must be directly proportional to KVA rating","same polarities are connected together","both b & c",3]
+["In a d.c. machine, the armature mmf is","stationary w.r.t. armature","rotating w.r.t. field","stationary w.r.t. field","rotating w.r.t. brushes",3]
+["In a synchronous motor if the excitation is reduced then the power factor is","unity power factor","leading power factor","lagging power factor","none of these",2]
+["Hydro-alternators have","many poles and are cylindrical type","fewer poles and are cylindrical type","fewer poles and are salient pole type","many poles and are salient pole type",4]

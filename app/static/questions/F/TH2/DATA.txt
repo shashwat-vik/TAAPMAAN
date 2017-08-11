@@ -1,0 +1,4 @@
+["Which of the following is not a natural refrigerant?","water","hydrocarbons","chlorofluorocarbons","ammonia",3]
+["During adiabatic saturation process on unsaturated air, the parameter which remains constant is","DBT","DPT","WBT","Relative humidity",3]
+["For rectangular ducts, the aspect ratio is equal to","sum of longer and shorter sides","difference of longer and shorter sides","product of longer and shorter sides","ratio of longer and shorter sides",4]
+["In a cooling tower, the minimum temperature to which water can be cooled is equal to the","dew point temperature of the air at the inlet","dry bulb temperature of the air at the inlet","thermodynamic wet bulb temperature of the air at the inlet","mean of the dew point and dry bulb temperature of the air at the inlet",3]

@@ -1,0 +1,4 @@
+["Asia's only Naval Aviation Museum is situated in which state of India?","Goa","Karnataka","Rajasthan","Himachal Pradesh",1]
+["The air conditioning of the Burj Khalifa is done by which company?","Daikin","Blue Star","Hitachi","Voltas",4]
+["Name the company whose logo is this-","B.png","Trane India"]
+["According to NASA, which moon of Saturn may have ingredients for life as ice geysers have been detected on it?","Lapetus","Enceladus","Titan","Dione",2]

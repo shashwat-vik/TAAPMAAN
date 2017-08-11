@@ -1,0 +1,5 @@
+["Which one of the following helps in avoiding cavitation in centrifugal pump?","Low suction pressure","Low delivery pressure","High suction pressure","High delivery pressure",3]
+["Energy loss in flow through nozzle as compared to Venturimeter is","Same","More","Less","Unpredictable",1] 
+["Which of the following advantages is NOT possessed by Kaplan turbine over Francis turbine?","Low frictional losses","Less chance of cavitation","Part load efficiency is higher","More compact and smaller in size",2]
+["In reaction turbine, change of load can be done by altering","Flow velocity","Head","RPM of runner","Guide vane angle",4] 
+ 

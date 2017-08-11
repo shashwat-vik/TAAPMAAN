@@ -1,0 +1,4 @@
+["......................... has the maximum value of thermal conductivity","Lead","Copper","Steel","Aluminium",2]
+["Direct contact heat exchangers are used in :","IC Engines","Milk chiller","Cooling Towers","Oil Coolers",3]
+["For laminar conditions, the thickness of thermal boundary layer increases with its distance from the leading edge in proportion to :","x","x1/2","x1/3","x1/4",2]
+["Where in the system is the excess superheat added that must be removed before condensation in the condenser can take place?","At the beginning of the evaporator and at the end of the receiver","At the end of the receiver and at the beginning of the thermostatic expansion valve","At the beginning of the evaporator and in the compressor","At the end of the evaporator and in the compressor",4]

@@ -1,0 +1,4 @@
+["In which city did the first chapter of ISHRAE begin?","New Delhi","Mumbai","Bangalore","Chennai",3]
+["According to LEED (Leadership in Energy and Environmental    design) rating system, a building is certified Gold if it earns points in the range of","70-79","80-89","90-99","80-99",1]
+["Identify the company whose logo is given below:","A.png","Carrier"]
+["The first air conditioner invented by William Carrier in 1902 was not with purpose of human comfort. It was made with a purpose of","Cooling the refrigeration equipments (Evaporator, Condenser etc)","Prohibiting the shrinkage of papers","Making the ambience of pharmaceutical industry dust and microbes free","Stopping the deterioration of the quality of photographs",2]

@@ -1,0 +1,4 @@
+["The comfort chart is drawn between","DBT and RH","DBT and WBT","WBT and DPT","WBT, RH and Air velocity",2]
+["The wet bulb depression is zero, when relative humidity is equal to","Zero","0.5","0.75","1.0",4]
+["Room latent heat factor will be equal to, if room sensible heat and room latent heat are equal to 70 KW and 30 KW respectively","0.3","0.5","0.7","1.0",1]
+["In designing ducts, the equal friction method is ideal","Only for return ducts","when the system is balanced","when the system is not balanced","none of these",2]

@@ -1,0 +1,5 @@
+["Weber number is ratio of square root of inertia force to","Surface tension force","Gravity force","Pressure force","Viscous force",1]
+["In a reciprocating pump, air vessels are used to","Smoothen the flow","Reduce suction head","Increase delivery head","Reduce acceleration head",4]
+["Which of these assumptions is NOT made during the analysis of flow through a rectangular notch?","Velocity of particles are uniform upstream of notch","All particles passing through the notch move horizontally","Pressure throughout the nappe is atmospheric","The space under nappe is ventilated",4]
+["In a flow through pipe, the transition from laminar to turbulent flow does not depend on","Velocity of the fluid","Density of the fluid","Length of the pipe","Diameter of the pipe",3]
+ 

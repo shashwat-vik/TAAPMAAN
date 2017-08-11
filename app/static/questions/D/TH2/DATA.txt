@@ -1,0 +1,4 @@
+["Which of the following is consider comfort conditions in air-conditioning?","10°C DBT and 50% RH","15°C DBT and 40% RH","20°C DBT and 60% RH","25°C DBT and 70% RH",3]
+["On psychrometric chart, the constant wet bulb temperature lines coincide with","constant relatives humidity lines.","constant enthalpy lines","constant dew point temperature lines","constant volume lines",2]
+["The main process which takes place in a desert-cooler is","sensible cooling","dehumidification","adiabatic saturation","cooling and dehumidification",4]
+["The latent heat load in an auditorium is 25% of the sensible heat load. The value of sensible heat factor (SHF) is equal to","0.25","0.5","0.8","1.0",3]

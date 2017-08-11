@@ -1,0 +1,4 @@
+["Pattern used in precision investment casting is generally made of","Wood","Metal","Plastic","Wax",4]
+["Keyhole technique is used in which kind of welding?","Submerged arc welding","Tungsten inert gas welding","Plasma arc welding","Gas Metallic Arc Welding",3] 
+["In a pressurized gating system","Air aspiration rate is minimum","Molten metal flow velocity is high","Area of sprue is greater than that of gate","All of these",4]
+["In tandem rolling","The thickness of strip is successively decreased at several stages.","Round and spherical components can be easily produced","Complex-shaped components can be easily produced","Two or more layers of metal are rolled together",1]

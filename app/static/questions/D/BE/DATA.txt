@@ -1,0 +1,4 @@
+["OC & SC test of transformer helps to determine ","parameters of the equivalent circuit","voltage regulation","efficiency","all of these ",4]
+["In a synchronous motor if the excitation is increased then the power factor is","unity power factor","leading power factor","lagging power factor","none of these",3]
+["When a synchronous motor is running at synchronous speed , the damper winding produces ","damping torque","eddy current torque","both a & b","no torque",4]
+["The component responsible for maximum loss in a DG Set is","alternator losses","stack loss through flue gases","coolant losses","radiation losses",2]

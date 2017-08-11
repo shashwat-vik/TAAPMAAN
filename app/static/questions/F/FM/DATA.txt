@@ -1,0 +1,4 @@
+["The process of the formation and subsequent collapse of vapour bubbles in a pump is called:","Cavitation","Gas binding","Deadheading","Pump run-out",1]
+["Flow separation is likely to take place when the pressure gradient in the direction of flow is","Zero","Adverse","Slightly favourable","Strongly favourable",2]
+["Negative slip occurs in a reciprocating pump, when delivery pipe is","Long and suction pipe is short and pump is running at low speed","Long and suction pipe is short and pump is running at high speed","Short and suction pipe is long and pump is running at high speed","Short and suction pipe is long and pump is running at high speed",4]
+["A turbine pump is basically a centrifugal pump equipped additionally with","Backward curved blades","Vaned diffusion casing","Inlet guide bladed","Adjustable blades",2]

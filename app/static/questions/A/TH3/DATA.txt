@@ -1,0 +1,4 @@
+["The total radiation leaving a surface per unit time per unit area  is known as :","Radiosity ( J )","Irradiation ( G )","Heat Flux ( q )","Emissive Power ( E )",1]
+["Reciprocity Theorem states that :","A1F1-2 = A2F2-1","A2F1-2 = A1F2-1","F1-2 = F2-1","A1F1 = A2F2",1]
+["In convection , Thermal Boundary Layer is equal to Hydrodynamic Boundary Layer when Prandtl No. ( Pr ) is:","Greater than 1","Less than 1","Equal to 1","Never",3]
+["Which component of a dehumidifier is often used to reheat the air after moisture is removed?","Evaporator","Chiller","Condenser","Compressor",3]

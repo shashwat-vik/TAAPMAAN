@@ -1,0 +1,4 @@
+["Fahrenheit scale divides into ______ parts the temperature range of freezing point of water to its boiling point","180","90","270","360",1] 
+["For a single component two – phase mixture the number of independent variable properties are","Two","One","Zero","three",2]
+["Which of the following is used for testing the leaks in an entire refrigeration circuit before it can be charged with refrigerant","Dry hydrogen gas","Dry oxygen gas","Dry nitrogen gas","Dry carbon",3]
+["An air-conditioning system is pumped down and the power is switched off. If the suction pressure rises rapidly, this is an indication that the:","System is overcharged","System has a restriction in the refrigerant line","Suction valve is bad","Discharge valve is bad",4]

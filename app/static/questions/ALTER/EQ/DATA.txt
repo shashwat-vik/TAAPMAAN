@@ -1,0 +1,6 @@
+["Name the unit used in HVAC system?","A.jpg","Air Filter"]
+["Identify the equipment (with wires) attached with the refrigerator coil","B.jpg","Defrost Heater"]
+["Name the unit used in HVAC system?","C.jpg","Fan Coil Unit"]
+["Name the unit used in HVAC system?","D.png","Jet Fan"]
+["Identify the device used in refrigeration system","E.jpg","Evaporator Coil"]
+["What is the unit commonly known as:","F.jpg","Variable Air Volume Unit"]

@@ -1,0 +1,4 @@
+["The primary reason for the low power factor is due to the installation of ","Induction motors","DC motors","Synchronous motors","Commutator motors",1]
+["The phenomenon of oscillating neutral occurs in","delta / delta connection due to unbalanced load","star/star connection due to balanced load without neutral","star/star connection due to  unbalanced load without neutral","star/star connection due to  unbalanced load with neutral",3]
+["During short circuit test iron losses are negligible because","the current on the secondary side is negligible","the voltage on the secondary side does not vary","the voltage applied on the primary side is low","none of these",3]
+["Turbo alternators have ","many poles and are cylindrical type","fewer poles and are cylindrical type ","fewer poles and are salient pole type","many poles and are salient pole type",2]

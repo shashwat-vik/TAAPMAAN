@@ -83,7 +83,7 @@ $(document).ready(function(e) {
     // TIMER HANDLER. ACTIVATE TIMER ON CLICK, IF NOT ALREADY TICKING.
     $(".card-header .card-timer").click(function() {
         if (!TIMER_STARTED) {
-            MYTIMER.start(30);
+            MYTIMER.start(60);
             TIMER_STARTED=true;
         }
     });

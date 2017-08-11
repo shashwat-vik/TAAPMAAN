@@ -1,0 +1,4 @@
+["Which country hosted the 2017 world expo?","Argentina","Nicaragua","Kazakhstan","Singapore",3]
+["The first animated google doodle was made in 2010 on the occasion of the birthday of","John Lennon","Charlie Chaplin","Albert Einstein","Leonardo daVinci",1]
+["Name the company whose logo is linked with this image","D.png","Goodman"]
+["Which of the facts about Jim Corbett National Park is false?","It is the first national park of India","It was the first national park to come under project tiger","It was initially known as Gangotri National Park","None of these",3]

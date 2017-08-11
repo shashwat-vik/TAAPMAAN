@@ -1,0 +1,4 @@
+["NTU as related to heat exchangers stand for","Number of Transfer Units","Numerical Transfer Units","Negligible Tube Units","Neutral Transfer Units",1]
+["A body is called Gray, if monochromatic emissivity of the body is","0","1","same for all wavelengths","different for all wavelengths",3]
+["The heat flow equation through a hollow sphere of radius r1 and r2 is to be written in same form as that for plane wall. For wall thickness ( r2 - r1 ), the equivalent mean radius for the shell is:","(r1+r2)/2","r1.r2","vr1/r2","( r1 + r2 )/ ln ( r2/r1 )",3]
+["A passive method to keep the house comfortably warm by solar conditioning in cold climatic condition is to paint the","Eastern wall of the house by black paint on its outer side","Eastern wall of the house by back paints on its inner side","Southern wall of the house by black paint on its outer side","Southern wall of the house by black paint on its inner side",2]

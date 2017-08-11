@@ -1,0 +1,4 @@
+["The best shape for sprue in sand casting is","Straight cylindrical","Tapered","Either a or c","Shape does not affect anything",2] 
+["Silica gel is produced in which of the following moulding process?","CO2 moulding","Permanent moulding","Investment moulding","Shell moulding",1]
+["The strength of a brazed joint","Decreases with increase in gap between the two joining surfaces","Increases with increase in gap between the two joining surfaces","Decreases up to certain gap between the two joining surfaces beyond which it increases","Increases up to certain gap between the two joining surfaces beyond which it decreases",4]
+["Which of the following sheet-metal manufacturing process does not experience any spring back:","Blanking","Shallow drawing","Deep drawing","Stretch forming",4]

@@ -1,0 +1,5 @@
+["Which of the following indoor factors/effects first decreases and then increases as relative humidity (RH) is increased? ","Dust mites","Virus","Respiratory infections","Allergic rhinitis and asthma",4]
+["Ina diabatic humidification of indoor air","the RH of the air increases","the RH of the air decreases","the RH of the air remains the same","the RH of air may increase or may decrease",1]
+["Which of the following statements are correct? 1. The human body can lose heat even if its temperature is less than the atmospheric temperature. 2. Relative humidity cannot be increased by cooling and dehumidification. 3. Warm air increases the rate of radiation of heat from the human body. 4. Increase in air movement increases the evaporation from the human body. "," 1 and 4  "," 2 and 3","1 and 3","only 4",1]
+["i) Dry bulb temperature    ii) Wet bulb temperature  iii) Relative humidity   iv) Air velocity.   Out of these four parameters, which are needed to find the value of Corrected Effective Temperature (CET) value graphically? ","only i and ii ","only i and iii","only i, ii and iii ","only i, ii and iv ",4]
+

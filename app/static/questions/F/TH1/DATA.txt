@@ -1,0 +1,4 @@
+["Which is usually the costliest item in a refrigeration system?","Condensor","Capillary tube","Compressor","Evaporator",3]
+["The efficiency of diesel cycle approaches to otto cycle efficiency when:","Cut off is increased","Cut off is decreased","Cut off is zero","Cut off is constant",3]
+["A low pressure switch is provided to stop the compressor when the compressor ________ pressure falls below safety limits","Discharge","Suction","Either discharge or suction","Both discharge & suction",2]
+["When installing a remote condensing unit that will be located outdoors, it is necessary to install a crankcase heater on the compressor to:","Prevent migration of liquid refrigerant in oil","Keep the oil viscosity low for good lubrication","Prevent ice formation on compressor","Prevent sludging of oil",1]

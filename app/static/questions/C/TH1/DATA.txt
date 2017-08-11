@@ -1,0 +1,4 @@
+["The heat content of a substance is called","Enthalpy","Latent heat","Sensible heat","None of the above",1]
+["A cycle consisting of two  isothermal and two isochoric lines is called","Carnot Cycle","Otto Cycle","Sterling Cycle","Ericsson Cycle",3] 
+["At -273 centigrade temperature the which of the following energies does not becomes zero:","Lattice energy","Chemical energy","Magnetic potential","None of these",4]
+["Purging is a term which describes _____________","leakage of refrigerant into the atmosphere","removing unwanted air, vapours, dirt or moisture from a system","removing excess dirt from the atmosphere","adding refrigerant to a system",2]

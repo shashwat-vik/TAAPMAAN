@@ -1,0 +1,4 @@
+["Which of the following elements characterize Stainless Steel?","Manganese","Nickel","Silicon","Chromium",4]
+["Arrange according to the rate of cooling","Hardening<Annealing<Normalizing","Annealing<Normalizing<Hardening","Hardening<Normalizing<Annealing","Annealing<Hardening<Normalizing",2] 
+["“Measuring a mass by means of the Borda method” is following which method of measurement.","Comparison Method","Substitution Method","Transposition Method","Deflection Method",2] 
+["Which of the shielding gases used in Gas Metal Arc Welding provides best thermal conductivity and deposition rate?","Argon","Helium","Nitrogen","Carbon monoxide",2] 

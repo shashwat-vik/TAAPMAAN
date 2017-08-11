@@ -20,7 +20,7 @@
                                 <i class="fa fa-history fa-2x" style="padding:0.6em 0.6em 0 0;"></i>
                             </div>
                             <div class="col-md-6 card-timer">
-                                    0 0 : 3 0
+                                    0 0 : 6 0
                             </div>
                             <div class="col-md-3 card-utils">
                                 <i class="fa fa-arrow-right fa-2x pull-right animsition-link" href="{{data['NEXTP']}}" style="padding:0.6em 0.6em 0 0;"></i>
@@ -29,12 +29,16 @@
                         </div>
                     </div>
                     <div class="card-question">
-                        <p>{{data['QUE']}}</p>
+                        <p>{{data['QUE'] | safe}}</p>
                     </div>
                     <div class="card-multimedia text-center">
+                        {%- if data['TYPE'] == 'IMG' %}
+                        <img src="{{data['MEDIA']}}" width="400">
+                        {% elif data['TYPE'] == 'VID' %}
                         <video class="content" controls>
-                            <source src="{{url_for('static', filename=data['VID'])}}" width="400" type="video/webm">
+                            <source src="{{data['MEDIA']}}" width="400" type="video/webm">
                         </video>
+                        {% endif -%}
                     </div>
                     <div class="card-input text-center">
                         <input class="content input-lg" type="text">

@@ -1,0 +1,4 @@
+["First paralympic games were organized in which city?","Madrid","Rome","Tokyo","London",2]
+["What   does  RATA stands for��","Refrigeration and Air Conditioning Trades Association","Refrigeration and Air Conditioning Trades Accredition","Refrigeration and Air Conditioner Trading Association","Refrigeration and Air Conditioning Trades Accredited Council",1]
+["Name the company whose logo is linked with this image","F.png","Emerson Climate Technologies"]
+["Which song became the first to receive Doris Day Music Award given for environmental awareness?","Looking for changes by Paul McCartney","Man in the mirror by Michael Jackson","Countdown to extinction by Megadeth","Earth Song by Michael Jackson",2]

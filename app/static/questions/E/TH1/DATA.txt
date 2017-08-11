@@ -1,0 +1,4 @@
+["In a reversible cyclic process, entropy will:","Remains constant","Increase","Decrease","Increase or Decrease, depending on the nature of process",1]
+["The _______ connects the condenser to the expansion device","Steam line","Liquid line","Suction line","Discharge line",2]
+["Under equal conditions of temperature and pressure, in the same volume, which of the following gases will have the maximum number of atoms?","Oxygen","Nitrogen","Ammonia","Equal",3]
+["Which of the following will not cause a high discharge pressure?","Dirty evaporator","Dirty condenser","Burned out condenser fan","Air in the system",1]

@@ -1,0 +1,4 @@
+["Shrinkage allowance is given to a pattern in order to take care of","Liquid shrinkage","Solid shrinkage","Both liquid and solid shrinkage","None of these",2]
+["Which one of the following is a solid state joining process?","Gas tungsten arc welding","Resistance spot welding","Friction welding","Submerged arc welding",3]
+["Find the correct statement from the ones given below","The clearance in a piercing die applied on the die while in a blanking die, it is applied on the punch","The clearance in a piercing die applied on the punch while in a blanking die, it is applied on the die","The clearance in a piercing die applied on the die while in a blanking die, it is applied on the die","The clearance in a piercing die applied on the punch while in a blanking die, it is applied on the punch",2]
+["The welding process used to weld ship hulls is","Manual metal arc welding","Gas metal arc welding","Submerged arc welding","Flux cored arc welding",3]

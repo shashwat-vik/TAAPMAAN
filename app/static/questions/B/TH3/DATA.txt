@@ -1,0 +1,4 @@
+["The Thermal Conduction Resistance ( Rth )cond. can be given by the equation :","( Rth )cond.  =  Ak/x","( Rth )cond.  = Q/A","( Rth )cond. = (Q.x)/ KA","( Rth )cond.  = x/kA",4]
+["The temperature distribution for  plane wall ,for steady state heat flow and constant thermal conductivity is:","logarithmic","parabolic","linear","cubic",3]
+["In radiation exchange between two surfaces, if there are N shields between two parallel surfaces, number of Space Resistances will be :","N+1","1","2N + 2","1/( N + 1 )",1]
+["If air is trapped inside a condenser coil, what symptoms would be present?","High discharge pressure, low amperage and a decrease of efficiency","Low discharge pressure, high amperage and excessive heat build-up","A decrease in efficiency, a decrease of heat build-up and high amperage","An increase in heat build-up, high amperage and high discharge pressure",4]

@@ -1,0 +1,4 @@
+["For spheres, the critical thickness of insulation is  given by :","h/2k","2k/h","k/h","k/2ph",2]
+["Stanton Number ( St ) can be expressed in terms of Nusselt No. ( Nu ), Reynolds No. ( Re ) & Prandtl No. ( Pr ) as :","St = Nu/ (Re . Pr )","St = Pr / ( Re . Nu )","St = Pr. Re. Nu","St = ( Pr. Re )0.4 Nu",1]
+["The time constant of a thermocouple is time taken to attain","50% of initial temp. difference","36.8% of initial temp. difference","63.2% of initial temp. difference","90 % of initial temp. difference",2]
+["Upon entering the condenser, the hot gas discharge first gives up its:","Specific Heat","Latent Heat","Superheat","Vaporization",3]

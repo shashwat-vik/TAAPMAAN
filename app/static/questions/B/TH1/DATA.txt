@@ -1,0 +1,4 @@
+["Which of the following is the correct expression of Gauge Pressure?","Absolute Pressure + Atmospheric Pressure","Absolute Pressure – Atmospheric Pressure","Atmospheric Pressure – Absolute Pressure","Absolute Pressure + 1.013*Atmospheric Pressure",2]
+["The _______ point of air is reached when air contains all the moisture it can hold","Saturation point","Dew point","Set point","Critical point",1]
+["For small installations of refrigeration systems( up to 35 kw),  which type of condenser is used?","Shell and tube type","Shell and coil type","Water cooled  type","Air cooled type",4]
+["Which of the following can cause the indoor coil of a packaged HVAC unit to ice over?","The unit is low on refrigerant charge","The blower belt is broken","The thermostat is set below 680 F","All of these",4]

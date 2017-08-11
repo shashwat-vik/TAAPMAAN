@@ -1,0 +1,4 @@
+["For Planck's Law E = hv,  the Planck's Constant h has the dimensions:","MLT","MLT-1","MLT-2","ML2T-1",4]
+["A correction of LMTD is necessary is case of which heat exchanger","parallel flow","counter flow","cross flow","all of the above",3]
+["Nusselt  Number is","a dimensionless temperature gradient","ratio of two temperature gradient","same for metals","both 1 & 2",4]
+["Water at 42o C sprayed into a steam of air at atmospheric pressure, dry bulb temperature of 40o C and wet bulb temperature of 20o C. The air leaving the spray humidifier is not saturated. Which of the following statement is true?","Air gets cooled and humidified","Air gets heated and humidified","Air gets heated and dehumidified","Air gets cooled and dehumidified",2]

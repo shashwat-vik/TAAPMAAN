@@ -1,0 +1,4 @@
+[" Which of the following does not require a draft tube?","Propeller turbine","Pelton turbine","Kaplan turbine","Francis turbine",2] 
+["An adjustable blade propeller turbine is called as","Banki Turbine","Pelton Turbine","Kaplan Turbine","Francis-Pelton turbine",3]
+["Which of the following pump is not a positive displacement pump?","Reciprocating pump","Centrifugal Pump","Vane Pump","Lobe Pump",2]
+["Due to difference in which parameter between Impulse and Reaction turbine, use of Draft tube (with reaction turbine) began?","Head","Discharge","Flow velocity","Whirl velocity",1] 

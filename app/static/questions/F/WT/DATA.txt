@@ -1,0 +1,4 @@
+["With the increase of Grain Fineness Number, the average grain size of sand","Increases","Decreases","Remains constant","Can’t be determined",2]
+["The following manufacturing process is always a cold forming process","Rolling","Wire drawing","Forging","Extrusion",2]
+["Which of the following moulding sand properties is not affected by the amount of clay or water present?","Refractoriness","Collapsibility","Durability","Permeability",1]
+["Fibre flow lines seen in the products produced by metal working process are","The obstruction that was provided during deformation process","The direction in which the metal moved during deformation","Not related to deformation process","Present in the metal before the deformation process",2]
