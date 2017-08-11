@@ -11,6 +11,7 @@
                     <h3><b>LEVEL</b></h3>
                     <h1>4</h1>
                 </div>
+                <div class="bottom_0"><a href="#">DOUBLE - HALF</a></div>
                 <div class="bottom" style="padding-top:1.8em;"><a href="#">&nbsp&nbspSTART&nbsp&nbsp</a></div>
             </div>
         </div>
@@ -26,13 +27,24 @@
 <script>
 var DOUBLE_HALF=false;
 $(document).ready(function(e) {
+    $(".bottom_0 a").on('click', function() {
+        if ($(this).hasClass('option_active')) {
+            $(this).removeClass('option_active');
+            DOUBLE_HALF=false;
+        } else {
+            $(this).addClass('option_active');
+            DOUBLE_HALF=true;
+        }
+        console.log(DOUBLE_HALF);
+    });
+
     // UPDATE SERVER ABOUT DOUBLE HALF, THEN MAKE THE GET REQUEST TO NEW PAGE
     $(".bottom a").on('click', function() {
         NEXTP = $(".insight .NEXTP").attr("url");
         NEXTP = NEXTP.substring(0, NEXTP.length-2);
         level = $(this).parent().parent().attr("mid");
         NEXTP = NEXTP+level;
-        AJAXPOST_URL = $(".insight .AJAXPOST_URL").attr("url")
+        AJAXPOST_URL = $(".insight .AJAXPOST_URL").attr("url");
         // AFTER UPDATING SERVER, MAKE A GET REQUEST
         $.ajax({
                 type : "POST",

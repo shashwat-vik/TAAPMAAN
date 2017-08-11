@@ -61,7 +61,7 @@ $(document).ready(function(e) {
 
     // UPDATE SERVER ABOUT DOUBLE HALF, THEN MAKE THE GET REQUEST TO NEW PAGE
     $(".panel .bottom a").on('click', function() {
-        NEXTP = $(".insight .NEXTP").attr("url")
+        NEXTP = $(".insight .NEXTP").attr("url");
         NEXTP = NEXTP.substring(0, NEXTP.length-2);
         level = $(this).parent().parent().attr("mid");
         NEXTP = NEXTP+level;
